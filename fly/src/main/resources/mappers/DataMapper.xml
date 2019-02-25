@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.test.fly.dao.DataMapper">
+  <resultMap id="BaseResultMap" type="com.test.fly.pojo.Data">
+    <constructor>
+      <idArg column="msid" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="id" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="pm" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="temp" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="humi" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="lon" javaType="java.lang.Double" jdbcType="DOUBLE" />
+      <arg column="lat" javaType="java.lang.Double" jdbcType="DOUBLE" />
+      <arg column="rq" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+      <arg column="status" javaType="java.lang.String" jdbcType="VARCHAR" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List">
+    msid, id, pm, temp, humi, lon, lat, rq, status
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from data
+    where msid = #{msid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from data
+    where msid = #{msid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.test.fly.pojo.Data">
+    insert into data (msid, id, pm, 
+      temp, humi, lon, lat, rq, status)
+    values (#{msid,jdbcType=INTEGER}, #{id,jdbcType=INTEGER}, #{pm,jdbcType=VARCHAR}, 
+      #{temp,jdbcType=INTEGER}, #{humi,jdbcType=INTEGER}, #{lon,jdbcType=DOUBLE}, #{lat,jdbcType=DOUBLE}, 
+       now(),#{status,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.test.fly.pojo.Data">
+    insert into data
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="msid != null">
+        msid,
+      </if>
+      <if test="id != null">
+        id,
+      </if>
+      <if test="pm != null">
+        pm,
+      </if>
+      <if test="temp != null">
+        temp,
+      </if>
+      <if test="humi != null">
+        humi,
+      </if>
+      <if test="lon != null">
+        lon,
+      </if>
+      <if test="lat != null">
+        lat,
+      </if>
+      <if test="rq != null">
+        rq,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="msid != null">
+        #{msid,jdbcType=INTEGER},
+      </if>
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="pm != null">
+        #{pm,jdbcType=VARCHAR},
+      </if>
+      <if test="temp != null">
+        #{temp,jdbcType=INTEGER},
+      </if>
+      <if test="humi != null">
+        #{humi,jdbcType=INTEGER},
+      </if>
+      <if test="lon != null">
+        #{lon,jdbcType=DOUBLE},
+      </if>
+      <if test="lat != null">
+        #{lat,jdbcType=DOUBLE},
+      </if>
+      <if test="rq != null">
+          now(),
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.test.fly.pojo.Data">
+    update data
+    <set>
+      <if test="id != null">
+        id = #{id,jdbcType=INTEGER},
+      </if>
+      <if test="pm != null">
+        pm = #{pm,jdbcType=VARCHAR},
+      </if>
+      <if test="temp != null">
+        temp = #{temp,jdbcType=INTEGER},
+      </if>
+      <if test="humi != null">
+        humi = #{humi,jdbcType=INTEGER},
+      </if>
+      <if test="lon != null">
+        lon = #{lon,jdbcType=DOUBLE},
+      </if>
+      <if test="lat != null">
+        lat = #{lat,jdbcType=DOUBLE},
+      </if>
+      <if test="rq != null">
+        rq = #{rq,jdbcType=TIMESTAMP},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where msid = #{msid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.test.fly.pojo.Data">
+    update data
+    set id = #{id,jdbcType=INTEGER},
+      pm = #{pm,jdbcType=VARCHAR},
+      temp = #{temp,jdbcType=INTEGER},
+      humi = #{humi,jdbcType=INTEGER},
+      lon = #{lon,jdbcType=DOUBLE},
+      lat = #{lat,jdbcType=DOUBLE},
+      rq = #{rq,jdbcType=TIMESTAMP},
+      status = #{status,jdbcType=VARCHAR}
+    where msid = #{msid,jdbcType=INTEGER}
+  </update>
+
+  <select id="selectLocate" parameterType="map" resultMap="BaseResultMap">
+    SELECT
+    <include refid="Base_Column_List" />
+     FROM fly.data where rq>=CURRENT_TIMESTAMP - INTERVAL 5 MINUTE
+    /*FROM fly.data WHERE rq IN
+    (SELECT MAX(rq) FROM fly.data  GROUP BY id)*/
+  </select>
+
+  <select id="historyLocate" parameterType="map" resultMap="BaseResultMap">
+    SELECT
+    <include refid="Base_Column_List" />
+    FROM fly.data
+  </select>
+
+</mapper>

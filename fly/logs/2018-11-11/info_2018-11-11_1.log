@@ -1,0 +1,679 @@
+11-11 12:23:15.346 [ INFO] [                    c.t.f.FlyApplication: 50] - Starting FlyApplication on wxs with PID 6104 (D:\fly\target\classes started by Administrator in D:\fly)
+11-11 12:23:15.349 [ INFO] [                    c.t.f.FlyApplication:680] - No active profile set, falling back to default profiles: default
+11-11 12:23:15.390 [ INFO] [ConfigServletWebServerApplicationContext:590] - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@60015ef5: startup date [Sun Nov 11 12:23:15 CST 2018]; root of context hierarchy
+11-11 12:23:16.549 [ INFO] [             o.s.b.w.e.t.TomcatWebServer: 91] - Tomcat initialized with port(s): 8080 (http)
+11-11 12:23:16.565 [ INFO] [               o.a.c.h.Http11NioProtocol:180] - Initializing ProtocolHandler ["http-nio-8080"]
+11-11 12:23:16.573 [ INFO] [                 o.a.c.c.StandardService:180] - Starting service [Tomcat]
+11-11 12:23:16.574 [ INFO] [                  o.a.c.c.StandardEngine:180] - Starting Servlet Engine: Apache Tomcat/8.5.34
+11-11 12:23:16.581 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - Loaded APR based Apache Tomcat Native library [1.2.17] using APR version [1.6.3].
+11-11 12:23:16.581 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+11-11 12:23:16.581 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+11-11 12:23:17.627 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - OpenSSL successfully initialized [OpenSSL 1.0.2o  27 Mar 2018]
+11-11 12:23:17.720 [ INFO] [                       o.a.c.c.C.[.[.[/]:180] - Initializing Spring embedded WebApplicationContext
+11-11 12:23:17.721 [ INFO] [                   o.s.w.c.ContextLoader:285] - Root WebApplicationContext: initialization completed in 2335 ms
+11-11 12:23:17.769 [ INFO] [       o.s.b.w.s.ServletRegistrationBean:187] - Servlet dispatcherServlet mapped to [/]
+11-11 12:23:17.772 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'characterEncodingFilter' to: [/*]
+11-11 12:23:17.772 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+11-11 12:23:17.772 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+11-11 12:23:17.772 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'requestContextFilter' to: [/*]
+11-11 12:23:18.152 [ INFO] [       o.s.w.s.h.SimpleUrlHandlerMapping:373] - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+11-11 12:23:18.371 [ INFO] [s.w.s.m.m.a.RequestMappingHandlerAdapter:588] - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@60015ef5: startup date [Sun Nov 11 12:23:15 CST 2018]; root of context hierarchy
+11-11 12:23:18.411 [ INFO] [s.w.s.m.m.a.RequestMappingHandlerMapping:549] - Mapped "{[/locate],methods=[POST]}" onto public com.test.fly.common.ServerResponse<java.util.List> com.test.fly.controller.UserController.locate()
+11-11 12:23:18.417 [ INFO] [s.w.s.m.m.a.RequestMappingHandlerMapping:549] - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+11-11 12:23:18.417 [ INFO] [s.w.s.m.m.a.RequestMappingHandlerMapping:549] - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+11-11 12:23:18.449 [ INFO] [       o.s.w.s.h.SimpleUrlHandlerMapping:373] - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+11-11 12:23:18.450 [ INFO] [       o.s.w.s.h.SimpleUrlHandlerMapping:373] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+11-11 12:23:18.484 [ INFO] [   o.s.b.a.w.s.WelcomePageHandlerMapping: 56] - Adding welcome page: class path resource [static/index.html]
+11-11 12:23:18.649 [ INFO] [       o.s.j.e.a.AnnotationMBeanExporter:433] - Registering beans for JMX exposure on startup
+11-11 12:23:18.651 [ INFO] [       o.s.j.e.a.AnnotationMBeanExporter:895] - Bean with name 'dataSource' has been autodetected for JMX exposure
+11-11 12:23:18.654 [ INFO] [       o.s.j.e.a.AnnotationMBeanExporter:668] - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+11-11 12:23:18.684 [ INFO] [               o.a.c.h.Http11NioProtocol:180] - Starting ProtocolHandler ["http-nio-8080"]
+11-11 12:23:18.691 [ INFO] [               o.a.t.u.n.NioSelectorPool:180] - Using a shared selector for servlet write/read
+11-11 12:23:18.706 [ INFO] [             o.s.b.w.e.t.TomcatWebServer:206] - Tomcat started on port(s): 8080 (http) with context path ''
+11-11 12:23:18.709 [ INFO] [                    c.t.f.FlyApplication: 59] - Started FlyApplication in 3.643 seconds (JVM running for 4.575)
+11-11 12:23:28.152 [ INFO] [                       o.a.c.c.C.[.[.[/]:180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+11-11 12:23:28.152 [ INFO] [               o.s.w.s.DispatcherServlet:494] - FrameworkServlet 'dispatcherServlet': initialization started
+11-11 12:23:28.170 [ INFO] [               o.s.w.s.DispatcherServlet:509] - FrameworkServlet 'dispatcherServlet': initialization completed in 18 ms
+11-11 12:24:45.967 [ INFO] [                    c.t.f.FlyApplication: 50] - Starting FlyApplication on wxs with PID 4080 (D:\fly\target\classes started by Administrator in D:\fly)
+11-11 12:24:45.968 [ INFO] [                    c.t.f.FlyApplication:680] - No active profile set, falling back to default profiles: default
+11-11 12:24:45.998 [ INFO] [ConfigServletWebServerApplicationContext:590] - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2b4bac49: startup date [Sun Nov 11 12:24:45 CST 2018]; root of context hierarchy
+11-11 12:24:46.970 [ INFO] [             o.s.b.w.e.t.TomcatWebServer: 91] - Tomcat initialized with port(s): 8080 (http)
+11-11 12:24:46.980 [ INFO] [               o.a.c.h.Http11NioProtocol:180] - Initializing ProtocolHandler ["http-nio-8080"]
+11-11 12:24:46.987 [ INFO] [                 o.a.c.c.StandardService:180] - Starting service [Tomcat]
+11-11 12:24:46.987 [ INFO] [                  o.a.c.c.StandardEngine:180] - Starting Servlet Engine: Apache Tomcat/8.5.34
+11-11 12:24:46.991 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - Loaded APR based Apache Tomcat Native library [1.2.17] using APR version [1.6.3].
+11-11 12:24:46.992 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+11-11 12:24:46.992 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+11-11 12:24:48.033 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - OpenSSL successfully initialized [OpenSSL 1.0.2o  27 Mar 2018]
+11-11 12:24:48.105 [ INFO] [                       o.a.c.c.C.[.[.[/]:180] - Initializing Spring embedded WebApplicationContext
+11-11 12:24:48.105 [ INFO] [                   o.s.w.c.ContextLoader:285] - Root WebApplicationContext: initialization completed in 2109 ms
+11-11 12:24:48.152 [ INFO] [       o.s.b.w.s.ServletRegistrationBean:187] - Servlet dispatcherServlet mapped to [/]
+11-11 12:24:48.155 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'characterEncodingFilter' to: [/*]
+11-11 12:24:48.156 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+11-11 12:24:48.156 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+11-11 12:24:48.156 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'requestContextFilter' to: [/*]
+11-11 12:24:48.440 [ INFO] [       o.s.w.s.h.SimpleUrlHandlerMapping:373] - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+11-11 12:24:48.649 [ INFO] [s.w.s.m.m.a.RequestMappingHandlerAdapter:588] - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2b4bac49: startup date [Sun Nov 11 12:24:45 CST 2018]; root of context hierarchy
+11-11 12:24:48.698 [ INFO] [s.w.s.m.m.a.RequestMappingHandlerMapping:549] - Mapped "{[/locate],methods=[POST]}" onto public com.test.fly.common.ServerResponse<java.util.List> com.test.fly.controller.UserController.locate()
+11-11 12:24:48.704 [ INFO] [s.w.s.m.m.a.RequestMappingHandlerMapping:549] - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+11-11 12:24:48.704 [ INFO] [s.w.s.m.m.a.RequestMappingHandlerMapping:549] - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+11-11 12:24:48.742 [ INFO] [       o.s.w.s.h.SimpleUrlHandlerMapping:373] - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+11-11 12:24:48.742 [ INFO] [       o.s.w.s.h.SimpleUrlHandlerMapping:373] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+11-11 12:24:48.777 [ INFO] [   o.s.b.a.w.s.WelcomePageHandlerMapping: 56] - Adding welcome page: class path resource [static/index.html]
+11-11 12:24:48.959 [ INFO] [       o.s.j.e.a.AnnotationMBeanExporter:433] - Registering beans for JMX exposure on startup
+11-11 12:24:48.960 [ INFO] [       o.s.j.e.a.AnnotationMBeanExporter:895] - Bean with name 'dataSource' has been autodetected for JMX exposure
+11-11 12:24:48.964 [ INFO] [       o.s.j.e.a.AnnotationMBeanExporter:668] - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+11-11 12:24:48.990 [ INFO] [               o.a.c.h.Http11NioProtocol:180] - Starting ProtocolHandler ["http-nio-8080"]
+11-11 12:24:48.997 [ INFO] [               o.a.t.u.n.NioSelectorPool:180] - Using a shared selector for servlet write/read
+11-11 12:24:49.006 [ INFO] [             o.s.b.w.e.t.TomcatWebServer:206] - Tomcat started on port(s): 8080 (http) with context path ''
+11-11 12:24:49.009 [ INFO] [                    c.t.f.FlyApplication: 59] - Started FlyApplication in 3.266 seconds (JVM running for 3.856)
+11-11 12:25:01.638 [ INFO] [                       o.a.c.c.C.[.[.[/]:180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+11-11 12:25:01.638 [ INFO] [               o.s.w.s.DispatcherServlet:494] - FrameworkServlet 'dispatcherServlet': initialization started
+11-11 12:25:01.659 [ INFO] [               o.s.w.s.DispatcherServlet:509] - FrameworkServlet 'dispatcherServlet': initialization completed in 21 ms
+11-11 12:50:55.183 [ INFO] [                    c.t.f.FlyApplication: 50] - Starting FlyApplication on wxs with PID 12840 (D:\fly\target\classes started by Administrator in D:\fly)
+11-11 12:50:55.184 [ INFO] [                    c.t.f.FlyApplication:680] - No active profile set, falling back to default profiles: default
+11-11 12:50:55.215 [ INFO] [ConfigServletWebServerApplicationContext:590] - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5f8edcc5: startup date [Sun Nov 11 12:50:55 CST 2018]; root of context hierarchy
+11-11 12:50:56.344 [ INFO] [             o.s.b.w.e.t.TomcatWebServer: 91] - Tomcat initialized with port(s): 8080 (http)
+11-11 12:50:56.372 [ INFO] [               o.a.c.h.Http11NioProtocol:180] - Initializing ProtocolHandler ["http-nio-8080"]
+11-11 12:50:56.382 [ INFO] [                 o.a.c.c.StandardService:180] - Starting service [Tomcat]
+11-11 12:50:56.382 [ INFO] [                  o.a.c.c.StandardEngine:180] - Starting Servlet Engine: Apache Tomcat/8.5.34
+11-11 12:50:56.387 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - Loaded APR based Apache Tomcat Native library [1.2.17] using APR version [1.6.3].
+11-11 12:50:56.387 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+11-11 12:50:56.388 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+11-11 12:50:57.423 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - OpenSSL successfully initialized [OpenSSL 1.0.2o  27 Mar 2018]
+11-11 12:50:57.494 [ INFO] [                       o.a.c.c.C.[.[.[/]:180] - Initializing Spring embedded WebApplicationContext
+11-11 12:50:57.494 [ INFO] [                   o.s.w.c.ContextLoader:285] - Root WebApplicationContext: initialization completed in 2282 ms
+11-11 12:50:57.540 [ INFO] [       o.s.b.w.s.ServletRegistrationBean:187] - Servlet dispatcherServlet mapped to [/]
+11-11 12:50:57.543 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'characterEncodingFilter' to: [/*]
+11-11 12:50:57.543 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+11-11 12:50:57.543 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+11-11 12:50:57.543 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'requestContextFilter' to: [/*]
+11-11 12:50:57.840 [ INFO] [       o.s.w.s.h.SimpleUrlHandlerMapping:373] - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+11-11 12:50:58.071 [ INFO] [s.w.s.m.m.a.RequestMappingHandlerAdapter:588] - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5f8edcc5: startup date [Sun Nov 11 12:50:55 CST 2018]; root of context hierarchy
+11-11 12:50:58.117 [ INFO] [s.w.s.m.m.a.RequestMappingHandlerMapping:549] - Mapped "{[/locate],methods=[POST]}" onto public com.test.fly.common.ServerResponse<java.util.List> com.test.fly.controller.UserController.locate()
+11-11 12:50:58.122 [ INFO] [s.w.s.m.m.a.RequestMappingHandlerMapping:549] - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+11-11 12:50:58.122 [ INFO] [s.w.s.m.m.a.RequestMappingHandlerMapping:549] - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+11-11 12:50:58.163 [ INFO] [       o.s.w.s.h.SimpleUrlHandlerMapping:373] - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+11-11 12:50:58.163 [ INFO] [       o.s.w.s.h.SimpleUrlHandlerMapping:373] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+11-11 12:50:58.200 [ INFO] [   o.s.b.a.w.s.WelcomePageHandlerMapping: 56] - Adding welcome page: class path resource [static/index.html]
+11-11 12:50:58.404 [ INFO] [       o.s.j.e.a.AnnotationMBeanExporter:433] - Registering beans for JMX exposure on startup
+11-11 12:50:58.406 [ INFO] [       o.s.j.e.a.AnnotationMBeanExporter:895] - Bean with name 'dataSource' has been autodetected for JMX exposure
+11-11 12:50:58.409 [ INFO] [       o.s.j.e.a.AnnotationMBeanExporter:668] - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+11-11 12:50:58.434 [ INFO] [               o.a.c.h.Http11NioProtocol:180] - Starting ProtocolHandler ["http-nio-8080"]
+11-11 12:50:58.441 [ INFO] [               o.a.t.u.n.NioSelectorPool:180] - Using a shared selector for servlet write/read
+11-11 12:50:58.450 [ INFO] [             o.s.b.w.e.t.TomcatWebServer:206] - Tomcat started on port(s): 8080 (http) with context path ''
+11-11 12:50:58.452 [ INFO] [                    c.t.f.FlyApplication: 59] - Started FlyApplication in 3.526 seconds (JVM running for 4.271)
+11-11 12:51:05.467 [ INFO] [                       o.a.c.c.C.[.[.[/]:180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+11-11 12:51:05.467 [ INFO] [               o.s.w.s.DispatcherServlet:494] - FrameworkServlet 'dispatcherServlet': initialization started
+11-11 12:51:05.484 [ INFO] [               o.s.w.s.DispatcherServlet:509] - FrameworkServlet 'dispatcherServlet': initialization completed in 16 ms
+11-11 12:51:05.969 [ INFO] [                  c.z.h.HikariDataSource:110] - DatebookHikariCP - Starting...
+11-11 12:51:06.201 [ INFO] [                  c.z.h.HikariDataSource:123] - DatebookHikariCP - Start completed.
+11-11 12:57:30.893 [ INFO] [                    c.t.f.FlyApplication: 50] - Starting FlyApplication on wxs with PID 6048 (D:\fly\target\classes started by Administrator in D:\fly)
+11-11 12:57:30.895 [ INFO] [                    c.t.f.FlyApplication:680] - No active profile set, falling back to default profiles: default
+11-11 12:57:30.925 [ INFO] [ConfigServletWebServerApplicationContext:590] - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6e509ffa: startup date [Sun Nov 11 12:57:30 CST 2018]; root of context hierarchy
+11-11 12:57:31.976 [ INFO] [             o.s.b.w.e.t.TomcatWebServer: 91] - Tomcat initialized with port(s): 8080 (http)
+11-11 12:57:31.986 [ INFO] [               o.a.c.h.Http11NioProtocol:180] - Initializing ProtocolHandler ["http-nio-8080"]
+11-11 12:57:31.993 [ INFO] [                 o.a.c.c.StandardService:180] - Starting service [Tomcat]
+11-11 12:57:31.994 [ INFO] [                  o.a.c.c.StandardEngine:180] - Starting Servlet Engine: Apache Tomcat/8.5.34
+11-11 12:57:31.998 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - Loaded APR based Apache Tomcat Native library [1.2.17] using APR version [1.6.3].
+11-11 12:57:31.998 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+11-11 12:57:31.999 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+11-11 12:57:33.030 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - OpenSSL successfully initialized [OpenSSL 1.0.2o  27 Mar 2018]
+11-11 12:57:33.101 [ INFO] [                       o.a.c.c.C.[.[.[/]:180] - Initializing Spring embedded WebApplicationContext
+11-11 12:57:33.101 [ INFO] [                   o.s.w.c.ContextLoader:285] - Root WebApplicationContext: initialization completed in 2178 ms
+11-11 12:57:33.146 [ INFO] [       o.s.b.w.s.ServletRegistrationBean:187] - Servlet dispatcherServlet mapped to [/]
+11-11 12:57:33.149 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'characterEncodingFilter' to: [/*]
+11-11 12:57:33.149 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+11-11 12:57:33.149 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+11-11 12:57:33.149 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'requestContextFilter' to: [/*]
+11-11 12:57:33.473 [ INFO] [       o.s.w.s.h.SimpleUrlHandlerMapping:373] - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+11-11 12:57:33.701 [ INFO] [s.w.s.m.m.a.RequestMappingHandlerAdapter:588] - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6e509ffa: startup date [Sun Nov 11 12:57:30 CST 2018]; root of context hierarchy
+11-11 12:57:33.755 [ INFO] [s.w.s.m.m.a.RequestMappingHandlerMapping:549] - Mapped "{[/locate],methods=[POST]}" onto public com.test.fly.common.ServerResponse<java.util.List> com.test.fly.controller.UserController.locate()
+11-11 12:57:33.760 [ INFO] [s.w.s.m.m.a.RequestMappingHandlerMapping:549] - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+11-11 12:57:33.760 [ INFO] [s.w.s.m.m.a.RequestMappingHandlerMapping:549] - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+11-11 12:57:33.813 [ INFO] [       o.s.w.s.h.SimpleUrlHandlerMapping:373] - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+11-11 12:57:33.813 [ INFO] [       o.s.w.s.h.SimpleUrlHandlerMapping:373] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+11-11 12:57:33.845 [ INFO] [   o.s.b.a.w.s.WelcomePageHandlerMapping: 56] - Adding welcome page: class path resource [static/index.html]
+11-11 12:57:34.028 [ INFO] [       o.s.j.e.a.AnnotationMBeanExporter:433] - Registering beans for JMX exposure on startup
+11-11 12:57:34.029 [ INFO] [       o.s.j.e.a.AnnotationMBeanExporter:895] - Bean with name 'dataSource' has been autodetected for JMX exposure
+11-11 12:57:34.033 [ INFO] [       o.s.j.e.a.AnnotationMBeanExporter:668] - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+11-11 12:57:34.058 [ INFO] [               o.a.c.h.Http11NioProtocol:180] - Starting ProtocolHandler ["http-nio-8080"]
+11-11 12:57:34.065 [ INFO] [               o.a.t.u.n.NioSelectorPool:180] - Using a shared selector for servlet write/read
+11-11 12:57:34.074 [ INFO] [             o.s.b.w.e.t.TomcatWebServer:206] - Tomcat started on port(s): 8080 (http) with context path ''
+11-11 12:57:34.077 [ INFO] [                    c.t.f.FlyApplication: 59] - Started FlyApplication in 3.412 seconds (JVM running for 4.086)
+11-11 12:57:44.866 [ INFO] [                       o.a.c.c.C.[.[.[/]:180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+11-11 12:57:44.866 [ INFO] [               o.s.w.s.DispatcherServlet:494] - FrameworkServlet 'dispatcherServlet': initialization started
+11-11 12:57:44.881 [ INFO] [               o.s.w.s.DispatcherServlet:509] - FrameworkServlet 'dispatcherServlet': initialization completed in 15 ms
+11-11 12:57:45.152 [ INFO] [                  c.z.h.HikariDataSource:110] - DatebookHikariCP - Starting...
+11-11 12:57:45.377 [ INFO] [                  c.z.h.HikariDataSource:123] - DatebookHikariCP - Start completed.
+11-11 13:17:36.058 [ INFO] [                    c.t.f.FlyApplication: 50] - Starting FlyApplication on wxs with PID 9916 (D:\fly\target\classes started by Administrator in D:\fly)
+11-11 13:17:36.059 [ INFO] [                    c.t.f.FlyApplication:680] - No active profile set, falling back to default profiles: default
+11-11 13:17:36.090 [ INFO] [ConfigServletWebServerApplicationContext:590] - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6a03bcb1: startup date [Sun Nov 11 13:17:36 CST 2018]; root of context hierarchy
+11-11 13:17:37.062 [ INFO] [             o.s.b.w.e.t.TomcatWebServer: 91] - Tomcat initialized with port(s): 8080 (http)
+11-11 13:17:37.072 [ INFO] [               o.a.c.h.Http11NioProtocol:180] - Initializing ProtocolHandler ["http-nio-8080"]
+11-11 13:17:37.079 [ INFO] [                 o.a.c.c.StandardService:180] - Starting service [Tomcat]
+11-11 13:17:37.080 [ INFO] [                  o.a.c.c.StandardEngine:180] - Starting Servlet Engine: Apache Tomcat/8.5.34
+11-11 13:17:37.084 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - Loaded APR based Apache Tomcat Native library [1.2.17] using APR version [1.6.3].
+11-11 13:17:37.085 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+11-11 13:17:37.085 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+11-11 13:17:38.109 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - OpenSSL successfully initialized [OpenSSL 1.0.2o  27 Mar 2018]
+11-11 13:17:38.199 [ INFO] [                       o.a.c.c.C.[.[.[/]:180] - Initializing Spring embedded WebApplicationContext
+11-11 13:17:38.199 [ INFO] [                   o.s.w.c.ContextLoader:285] - Root WebApplicationContext: initialization completed in 2112 ms
+11-11 13:17:38.245 [ INFO] [       o.s.b.w.s.ServletRegistrationBean:187] - Servlet dispatcherServlet mapped to [/]
+11-11 13:17:38.251 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'characterEncodingFilter' to: [/*]
+11-11 13:17:38.251 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+11-11 13:17:38.251 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+11-11 13:17:38.252 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'requestContextFilter' to: [/*]
+11-11 13:17:38.319 [ INFO] [                 o.a.c.c.StandardService:180] - Stopping service [Tomcat]
+11-11 13:19:03.270 [ INFO] [                    c.t.f.FlyApplication: 50] - Starting FlyApplication on wxs with PID 9808 (D:\fly\target\classes started by Administrator in D:\fly)
+11-11 13:19:03.271 [ INFO] [                    c.t.f.FlyApplication:680] - No active profile set, falling back to default profiles: default
+11-11 13:19:03.304 [ INFO] [ConfigServletWebServerApplicationContext:590] - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2f465398: startup date [Sun Nov 11 13:19:03 CST 2018]; root of context hierarchy
+11-11 13:19:04.254 [ INFO] [             o.s.b.w.e.t.TomcatWebServer: 91] - Tomcat initialized with port(s): 8080 (http)
+11-11 13:19:04.263 [ INFO] [               o.a.c.h.Http11NioProtocol:180] - Initializing ProtocolHandler ["http-nio-8080"]
+11-11 13:19:04.271 [ INFO] [                 o.a.c.c.StandardService:180] - Starting service [Tomcat]
+11-11 13:19:04.271 [ INFO] [                  o.a.c.c.StandardEngine:180] - Starting Servlet Engine: Apache Tomcat/8.5.34
+11-11 13:19:04.275 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - Loaded APR based Apache Tomcat Native library [1.2.17] using APR version [1.6.3].
+11-11 13:19:04.275 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+11-11 13:19:04.275 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+11-11 13:19:05.294 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - OpenSSL successfully initialized [OpenSSL 1.0.2o  27 Mar 2018]
+11-11 13:19:05.392 [ INFO] [                       o.a.c.c.C.[.[.[/]:180] - Initializing Spring embedded WebApplicationContext
+11-11 13:19:05.393 [ INFO] [                   o.s.w.c.ContextLoader:285] - Root WebApplicationContext: initialization completed in 2093 ms
+11-11 13:19:05.441 [ INFO] [       o.s.b.w.s.ServletRegistrationBean:187] - Servlet dispatcherServlet mapped to [/]
+11-11 13:19:05.444 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'characterEncodingFilter' to: [/*]
+11-11 13:19:05.444 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+11-11 13:19:05.444 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+11-11 13:19:05.444 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'requestContextFilter' to: [/*]
+11-11 13:19:05.477 [ INFO] [                 o.a.c.c.StandardService:180] - Stopping service [Tomcat]
+11-11 13:21:05.423 [ INFO] [                    c.t.f.FlyApplication: 50] - Starting FlyApplication on wxs with PID 10376 (D:\fly\target\classes started by Administrator in D:\fly)
+11-11 13:21:05.424 [ INFO] [                    c.t.f.FlyApplication:680] - No active profile set, falling back to default profiles: default
+11-11 13:21:05.457 [ INFO] [ConfigServletWebServerApplicationContext:590] - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@610f7aa: startup date [Sun Nov 11 13:21:05 CST 2018]; root of context hierarchy
+11-11 13:21:06.435 [ INFO] [             o.s.b.w.e.t.TomcatWebServer: 91] - Tomcat initialized with port(s): 8080 (http)
+11-11 13:21:06.455 [ INFO] [               o.a.c.h.Http11NioProtocol:180] - Initializing ProtocolHandler ["http-nio-8080"]
+11-11 13:21:06.462 [ INFO] [                 o.a.c.c.StandardService:180] - Starting service [Tomcat]
+11-11 13:21:06.462 [ INFO] [                  o.a.c.c.StandardEngine:180] - Starting Servlet Engine: Apache Tomcat/8.5.34
+11-11 13:21:06.467 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - Loaded APR based Apache Tomcat Native library [1.2.17] using APR version [1.6.3].
+11-11 13:21:06.468 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+11-11 13:21:06.468 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+11-11 13:21:07.500 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - OpenSSL successfully initialized [OpenSSL 1.0.2o  27 Mar 2018]
+11-11 13:21:07.570 [ INFO] [                       o.a.c.c.C.[.[.[/]:180] - Initializing Spring embedded WebApplicationContext
+11-11 13:21:07.570 [ INFO] [                   o.s.w.c.ContextLoader:285] - Root WebApplicationContext: initialization completed in 2115 ms
+11-11 13:21:07.616 [ INFO] [       o.s.b.w.s.ServletRegistrationBean:187] - Servlet dispatcherServlet mapped to [/]
+11-11 13:21:07.619 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'characterEncodingFilter' to: [/*]
+11-11 13:21:07.619 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+11-11 13:21:07.619 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+11-11 13:21:07.619 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'requestContextFilter' to: [/*]
+11-11 13:21:07.912 [ INFO] [       o.s.w.s.h.SimpleUrlHandlerMapping:373] - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+11-11 13:21:08.162 [ INFO] [s.w.s.m.m.a.RequestMappingHandlerAdapter:588] - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@610f7aa: startup date [Sun Nov 11 13:21:05 CST 2018]; root of context hierarchy
+11-11 13:21:08.198 [ INFO] [s.w.s.m.m.a.RequestMappingHandlerMapping:549] - Mapped "{[/locate],methods=[POST]}" onto public com.test.fly.common.ServerResponse<java.util.List> com.test.fly.controller.UserController.locate()
+11-11 13:21:08.203 [ INFO] [s.w.s.m.m.a.RequestMappingHandlerMapping:549] - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+11-11 13:21:08.203 [ INFO] [s.w.s.m.m.a.RequestMappingHandlerMapping:549] - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+11-11 13:21:08.238 [ INFO] [       o.s.w.s.h.SimpleUrlHandlerMapping:373] - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+11-11 13:21:08.239 [ INFO] [       o.s.w.s.h.SimpleUrlHandlerMapping:373] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+11-11 13:21:08.271 [ INFO] [   o.s.b.a.w.s.WelcomePageHandlerMapping: 56] - Adding welcome page: class path resource [static/index.html]
+11-11 13:21:08.450 [ INFO] [       o.s.j.e.a.AnnotationMBeanExporter:433] - Registering beans for JMX exposure on startup
+11-11 13:21:08.451 [ INFO] [       o.s.j.e.a.AnnotationMBeanExporter:895] - Bean with name 'dataSource' has been autodetected for JMX exposure
+11-11 13:21:08.455 [ INFO] [       o.s.j.e.a.AnnotationMBeanExporter:668] - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+11-11 13:21:08.478 [ INFO] [               o.a.c.h.Http11NioProtocol:180] - Starting ProtocolHandler ["http-nio-8080"]
+11-11 13:21:08.485 [ INFO] [               o.a.t.u.n.NioSelectorPool:180] - Using a shared selector for servlet write/read
+11-11 13:21:08.495 [ INFO] [             o.s.b.w.e.t.TomcatWebServer:206] - Tomcat started on port(s): 8080 (http) with context path ''
+11-11 13:21:08.497 [ INFO] [                    c.t.f.FlyApplication: 59] - Started FlyApplication in 3.307 seconds (JVM running for 3.885)
+11-11 13:21:17.763 [ INFO] [                       o.a.c.c.C.[.[.[/]:180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+11-11 13:21:17.763 [ INFO] [               o.s.w.s.DispatcherServlet:494] - FrameworkServlet 'dispatcherServlet': initialization started
+11-11 13:21:17.777 [ INFO] [               o.s.w.s.DispatcherServlet:509] - FrameworkServlet 'dispatcherServlet': initialization completed in 14 ms
+11-11 13:23:42.000 [ INFO] [                    c.t.f.FlyApplication: 50] - Starting FlyApplication on wxs with PID 8752 (D:\fly\target\classes started by Administrator in D:\fly)
+11-11 13:23:42.002 [ INFO] [                    c.t.f.FlyApplication:680] - No active profile set, falling back to default profiles: default
+11-11 13:23:42.031 [ INFO] [ConfigServletWebServerApplicationContext:590] - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2f465398: startup date [Sun Nov 11 13:23:42 CST 2018]; root of context hierarchy
+11-11 13:23:43.051 [ INFO] [             o.s.b.w.e.t.TomcatWebServer: 91] - Tomcat initialized with port(s): 8080 (http)
+11-11 13:23:43.061 [ INFO] [               o.a.c.h.Http11NioProtocol:180] - Initializing ProtocolHandler ["http-nio-8080"]
+11-11 13:23:43.068 [ INFO] [                 o.a.c.c.StandardService:180] - Starting service [Tomcat]
+11-11 13:23:43.068 [ INFO] [                  o.a.c.c.StandardEngine:180] - Starting Servlet Engine: Apache Tomcat/8.5.34
+11-11 13:23:43.073 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - Loaded APR based Apache Tomcat Native library [1.2.17] using APR version [1.6.3].
+11-11 13:23:43.073 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+11-11 13:23:43.074 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+11-11 13:23:44.110 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - OpenSSL successfully initialized [OpenSSL 1.0.2o  27 Mar 2018]
+11-11 13:23:44.193 [ INFO] [                       o.a.c.c.C.[.[.[/]:180] - Initializing Spring embedded WebApplicationContext
+11-11 13:23:44.194 [ INFO] [                   o.s.w.c.ContextLoader:285] - Root WebApplicationContext: initialization completed in 2166 ms
+11-11 13:23:44.247 [ INFO] [       o.s.b.w.s.ServletRegistrationBean:187] - Servlet dispatcherServlet mapped to [/]
+11-11 13:23:44.251 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'characterEncodingFilter' to: [/*]
+11-11 13:23:44.252 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+11-11 13:23:44.252 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+11-11 13:23:44.252 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'requestContextFilter' to: [/*]
+11-11 13:23:44.542 [ INFO] [       o.s.w.s.h.SimpleUrlHandlerMapping:373] - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+11-11 13:23:44.772 [ INFO] [s.w.s.m.m.a.RequestMappingHandlerAdapter:588] - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2f465398: startup date [Sun Nov 11 13:23:42 CST 2018]; root of context hierarchy
+11-11 13:23:44.830 [ INFO] [s.w.s.m.m.a.RequestMappingHandlerMapping:549] - Mapped "{[/locate],methods=[POST]}" onto public com.test.fly.common.ServerResponse<java.util.List> com.test.fly.controller.UserController.locate()
+11-11 13:23:44.836 [ INFO] [s.w.s.m.m.a.RequestMappingHandlerMapping:549] - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+11-11 13:23:44.836 [ INFO] [s.w.s.m.m.a.RequestMappingHandlerMapping:549] - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+11-11 13:23:44.881 [ INFO] [       o.s.w.s.h.SimpleUrlHandlerMapping:373] - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+11-11 13:23:44.881 [ INFO] [       o.s.w.s.h.SimpleUrlHandlerMapping:373] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+11-11 13:23:44.932 [ INFO] [   o.s.b.a.w.s.WelcomePageHandlerMapping: 56] - Adding welcome page: class path resource [static/index.html]
+11-11 13:23:45.133 [ INFO] [       o.s.j.e.a.AnnotationMBeanExporter:433] - Registering beans for JMX exposure on startup
+11-11 13:23:45.134 [ INFO] [       o.s.j.e.a.AnnotationMBeanExporter:895] - Bean with name 'dataSource' has been autodetected for JMX exposure
+11-11 13:23:45.137 [ INFO] [       o.s.j.e.a.AnnotationMBeanExporter:668] - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+11-11 13:23:45.167 [ INFO] [               o.a.c.h.Http11NioProtocol:180] - Starting ProtocolHandler ["http-nio-8080"]
+11-11 13:23:45.182 [ INFO] [               o.a.t.u.n.NioSelectorPool:180] - Using a shared selector for servlet write/read
+11-11 13:23:45.200 [ INFO] [             o.s.b.w.e.t.TomcatWebServer:206] - Tomcat started on port(s): 8080 (http) with context path ''
+11-11 13:23:45.205 [ INFO] [                    c.t.f.FlyApplication: 59] - Started FlyApplication in 3.428 seconds (JVM running for 4.023)
+11-11 13:23:48.654 [ INFO] [                       o.a.c.c.C.[.[.[/]:180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+11-11 13:23:48.654 [ INFO] [               o.s.w.s.DispatcherServlet:494] - FrameworkServlet 'dispatcherServlet': initialization started
+11-11 13:23:48.677 [ INFO] [               o.s.w.s.DispatcherServlet:509] - FrameworkServlet 'dispatcherServlet': initialization completed in 23 ms
+11-11 13:23:49.127 [ INFO] [                  c.z.h.HikariDataSource:110] - DatebookHikariCP - Starting...
+11-11 13:23:49.349 [ INFO] [                  c.z.h.HikariDataSource:123] - DatebookHikariCP - Start completed.
+11-11 13:30:34.090 [ INFO] [                    c.t.f.FlyApplication: 50] - Starting FlyApplication on wxs with PID 9212 (D:\fly\target\classes started by Administrator in D:\fly)
+11-11 13:30:34.092 [ INFO] [                    c.t.f.FlyApplication:680] - No active profile set, falling back to default profiles: default
+11-11 13:30:34.121 [ INFO] [ConfigServletWebServerApplicationContext:590] - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@21b2e768: startup date [Sun Nov 11 13:30:34 CST 2018]; root of context hierarchy
+11-11 13:30:35.040 [ INFO] [             o.s.b.w.e.t.TomcatWebServer: 91] - Tomcat initialized with port(s): 8080 (http)
+11-11 13:30:35.050 [ INFO] [               o.a.c.h.Http11NioProtocol:180] - Initializing ProtocolHandler ["http-nio-8080"]
+11-11 13:30:35.057 [ INFO] [                 o.a.c.c.StandardService:180] - Starting service [Tomcat]
+11-11 13:30:35.057 [ INFO] [                  o.a.c.c.StandardEngine:180] - Starting Servlet Engine: Apache Tomcat/8.5.34
+11-11 13:30:35.062 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - Loaded APR based Apache Tomcat Native library [1.2.17] using APR version [1.6.3].
+11-11 13:30:35.062 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+11-11 13:30:35.062 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+11-11 13:30:36.094 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - OpenSSL successfully initialized [OpenSSL 1.0.2o  27 Mar 2018]
+11-11 13:30:36.204 [ INFO] [                       o.a.c.c.C.[.[.[/]:180] - Initializing Spring embedded WebApplicationContext
+11-11 13:30:36.205 [ INFO] [                   o.s.w.c.ContextLoader:285] - Root WebApplicationContext: initialization completed in 2087 ms
+11-11 13:30:36.257 [ INFO] [       o.s.b.w.s.ServletRegistrationBean:187] - Servlet dispatcherServlet mapped to [/]
+11-11 13:30:36.259 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'characterEncodingFilter' to: [/*]
+11-11 13:30:36.260 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+11-11 13:30:36.260 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+11-11 13:30:36.260 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'requestContextFilter' to: [/*]
+11-11 13:30:36.579 [ INFO] [       o.s.w.s.h.SimpleUrlHandlerMapping:373] - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+11-11 13:30:36.803 [ INFO] [s.w.s.m.m.a.RequestMappingHandlerAdapter:588] - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@21b2e768: startup date [Sun Nov 11 13:30:34 CST 2018]; root of context hierarchy
+11-11 13:30:36.839 [ INFO] [s.w.s.m.m.a.RequestMappingHandlerMapping:549] - Mapped "{[/locate],methods=[POST]}" onto public com.test.fly.common.ServerResponse<java.util.List> com.test.fly.controller.UserController.locate()
+11-11 13:30:36.844 [ INFO] [s.w.s.m.m.a.RequestMappingHandlerMapping:549] - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+11-11 13:30:36.845 [ INFO] [s.w.s.m.m.a.RequestMappingHandlerMapping:549] - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+11-11 13:30:36.878 [ INFO] [       o.s.w.s.h.SimpleUrlHandlerMapping:373] - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+11-11 13:30:36.878 [ INFO] [       o.s.w.s.h.SimpleUrlHandlerMapping:373] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+11-11 13:30:36.911 [ INFO] [   o.s.b.a.w.s.WelcomePageHandlerMapping: 56] - Adding welcome page: class path resource [static/index.html]
+11-11 13:30:37.104 [ INFO] [       o.s.j.e.a.AnnotationMBeanExporter:433] - Registering beans for JMX exposure on startup
+11-11 13:30:37.105 [ INFO] [       o.s.j.e.a.AnnotationMBeanExporter:895] - Bean with name 'dataSource' has been autodetected for JMX exposure
+11-11 13:30:37.108 [ INFO] [       o.s.j.e.a.AnnotationMBeanExporter:668] - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+11-11 13:30:37.135 [ INFO] [               o.a.c.h.Http11NioProtocol:180] - Starting ProtocolHandler ["http-nio-8080"]
+11-11 13:30:37.148 [ INFO] [               o.a.t.u.n.NioSelectorPool:180] - Using a shared selector for servlet write/read
+11-11 13:30:37.161 [ INFO] [             o.s.b.w.e.t.TomcatWebServer:206] - Tomcat started on port(s): 8080 (http) with context path ''
+11-11 13:30:37.164 [ INFO] [                    c.t.f.FlyApplication: 59] - Started FlyApplication in 3.301 seconds (JVM running for 3.883)
+11-11 13:30:41.872 [ INFO] [                       o.a.c.c.C.[.[.[/]:180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+11-11 13:30:41.872 [ INFO] [               o.s.w.s.DispatcherServlet:494] - FrameworkServlet 'dispatcherServlet': initialization started
+11-11 13:30:41.897 [ INFO] [               o.s.w.s.DispatcherServlet:509] - FrameworkServlet 'dispatcherServlet': initialization completed in 25 ms
+11-11 13:30:42.299 [ INFO] [                  c.z.h.HikariDataSource:110] - DatebookHikariCP - Starting...
+11-11 13:30:42.535 [ INFO] [                  c.z.h.HikariDataSource:123] - DatebookHikariCP - Start completed.
+11-11 13:33:29.030 [ INFO] [                    c.t.f.FlyApplication: 50] - Starting FlyApplication on wxs with PID 1988 (D:\fly\target\classes started by Administrator in D:\fly)
+11-11 13:33:29.032 [ INFO] [                    c.t.f.FlyApplication:680] - No active profile set, falling back to default profiles: default
+11-11 13:33:29.061 [ INFO] [ConfigServletWebServerApplicationContext:590] - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5609159b: startup date [Sun Nov 11 13:33:29 CST 2018]; root of context hierarchy
+11-11 13:33:30.091 [ INFO] [             o.s.b.w.e.t.TomcatWebServer: 91] - Tomcat initialized with port(s): 8080 (http)
+11-11 13:33:30.100 [ INFO] [               o.a.c.h.Http11NioProtocol:180] - Initializing ProtocolHandler ["http-nio-8080"]
+11-11 13:33:30.108 [ INFO] [                 o.a.c.c.StandardService:180] - Starting service [Tomcat]
+11-11 13:33:30.109 [ INFO] [                  o.a.c.c.StandardEngine:180] - Starting Servlet Engine: Apache Tomcat/8.5.34
+11-11 13:33:30.112 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - Loaded APR based Apache Tomcat Native library [1.2.17] using APR version [1.6.3].
+11-11 13:33:30.112 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+11-11 13:33:30.113 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+11-11 13:33:31.139 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - OpenSSL successfully initialized [OpenSSL 1.0.2o  27 Mar 2018]
+11-11 13:33:31.209 [ INFO] [                       o.a.c.c.C.[.[.[/]:180] - Initializing Spring embedded WebApplicationContext
+11-11 13:33:31.209 [ INFO] [                   o.s.w.c.ContextLoader:285] - Root WebApplicationContext: initialization completed in 2150 ms
+11-11 13:33:31.257 [ INFO] [       o.s.b.w.s.ServletRegistrationBean:187] - Servlet dispatcherServlet mapped to [/]
+11-11 13:33:31.260 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'characterEncodingFilter' to: [/*]
+11-11 13:33:31.260 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+11-11 13:33:31.260 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+11-11 13:33:31.260 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'requestContextFilter' to: [/*]
+11-11 13:33:31.600 [ INFO] [       o.s.w.s.h.SimpleUrlHandlerMapping:373] - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+11-11 13:33:31.814 [ INFO] [s.w.s.m.m.a.RequestMappingHandlerAdapter:588] - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5609159b: startup date [Sun Nov 11 13:33:29 CST 2018]; root of context hierarchy
+11-11 13:33:31.852 [ INFO] [s.w.s.m.m.a.RequestMappingHandlerMapping:549] - Mapped "{[/locate],methods=[POST]}" onto public com.test.fly.common.ServerResponse<java.util.List> com.test.fly.controller.UserController.locate()
+11-11 13:33:31.858 [ INFO] [s.w.s.m.m.a.RequestMappingHandlerMapping:549] - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+11-11 13:33:31.858 [ INFO] [s.w.s.m.m.a.RequestMappingHandlerMapping:549] - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+11-11 13:33:31.900 [ INFO] [       o.s.w.s.h.SimpleUrlHandlerMapping:373] - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+11-11 13:33:31.900 [ INFO] [       o.s.w.s.h.SimpleUrlHandlerMapping:373] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+11-11 13:33:31.960 [ INFO] [   o.s.b.a.w.s.WelcomePageHandlerMapping: 56] - Adding welcome page: class path resource [static/index.html]
+11-11 13:33:32.164 [ INFO] [       o.s.j.e.a.AnnotationMBeanExporter:433] - Registering beans for JMX exposure on startup
+11-11 13:33:32.166 [ INFO] [       o.s.j.e.a.AnnotationMBeanExporter:895] - Bean with name 'dataSource' has been autodetected for JMX exposure
+11-11 13:33:32.170 [ INFO] [       o.s.j.e.a.AnnotationMBeanExporter:668] - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+11-11 13:33:32.206 [ INFO] [               o.a.c.h.Http11NioProtocol:180] - Starting ProtocolHandler ["http-nio-8080"]
+11-11 13:33:32.214 [ INFO] [               o.a.t.u.n.NioSelectorPool:180] - Using a shared selector for servlet write/read
+11-11 13:33:32.228 [ INFO] [             o.s.b.w.e.t.TomcatWebServer:206] - Tomcat started on port(s): 8080 (http) with context path ''
+11-11 13:33:32.235 [ INFO] [                    c.t.f.FlyApplication: 59] - Started FlyApplication in 3.422 seconds (JVM running for 3.99)
+11-11 13:33:36.728 [ INFO] [                       o.a.c.c.C.[.[.[/]:180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+11-11 13:33:36.729 [ INFO] [               o.s.w.s.DispatcherServlet:494] - FrameworkServlet 'dispatcherServlet': initialization started
+11-11 13:33:36.749 [ INFO] [               o.s.w.s.DispatcherServlet:509] - FrameworkServlet 'dispatcherServlet': initialization completed in 20 ms
+11-11 13:33:37.133 [ INFO] [                  c.z.h.HikariDataSource:110] - DatebookHikariCP - Starting...
+11-11 13:33:37.358 [ INFO] [                  c.z.h.HikariDataSource:123] - DatebookHikariCP - Start completed.
+11-11 13:50:39.466 [ INFO] [                    c.t.f.FlyApplication: 50] - Starting FlyApplication on wxs with PID 3172 (D:\fly\target\classes started by Administrator in D:\fly)
+11-11 13:50:39.467 [ INFO] [                    c.t.f.FlyApplication:680] - No active profile set, falling back to default profiles: default
+11-11 13:50:39.498 [ INFO] [ConfigServletWebServerApplicationContext:590] - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@610f7aa: startup date [Sun Nov 11 13:50:39 CST 2018]; root of context hierarchy
+11-11 13:50:40.478 [ INFO] [             o.s.b.w.e.t.TomcatWebServer: 91] - Tomcat initialized with port(s): 8080 (http)
+11-11 13:50:40.488 [ INFO] [               o.a.c.h.Http11NioProtocol:180] - Initializing ProtocolHandler ["http-nio-8080"]
+11-11 13:50:40.495 [ INFO] [                 o.a.c.c.StandardService:180] - Starting service [Tomcat]
+11-11 13:50:40.496 [ INFO] [                  o.a.c.c.StandardEngine:180] - Starting Servlet Engine: Apache Tomcat/8.5.34
+11-11 13:50:40.499 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - Loaded APR based Apache Tomcat Native library [1.2.17] using APR version [1.6.3].
+11-11 13:50:40.500 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+11-11 13:50:40.500 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+11-11 13:50:41.529 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - OpenSSL successfully initialized [OpenSSL 1.0.2o  27 Mar 2018]
+11-11 13:50:41.600 [ INFO] [                       o.a.c.c.C.[.[.[/]:180] - Initializing Spring embedded WebApplicationContext
+11-11 13:50:41.600 [ INFO] [                   o.s.w.c.ContextLoader:285] - Root WebApplicationContext: initialization completed in 2105 ms
+11-11 13:50:41.646 [ INFO] [       o.s.b.w.s.ServletRegistrationBean:187] - Servlet dispatcherServlet mapped to [/]
+11-11 13:50:41.649 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'characterEncodingFilter' to: [/*]
+11-11 13:50:41.649 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+11-11 13:50:41.649 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+11-11 13:50:41.649 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'requestContextFilter' to: [/*]
+11-11 13:50:41.930 [ INFO] [       o.s.w.s.h.SimpleUrlHandlerMapping:373] - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+11-11 13:50:42.145 [ INFO] [s.w.s.m.m.a.RequestMappingHandlerAdapter:588] - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@610f7aa: startup date [Sun Nov 11 13:50:39 CST 2018]; root of context hierarchy
+11-11 13:50:42.181 [ INFO] [s.w.s.m.m.a.RequestMappingHandlerMapping:549] - Mapped "{[/locate],methods=[POST]}" onto public com.test.fly.common.ServerResponse<java.util.List> com.test.fly.controller.UserController.locate()
+11-11 13:50:42.187 [ INFO] [s.w.s.m.m.a.RequestMappingHandlerMapping:549] - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+11-11 13:50:42.187 [ INFO] [s.w.s.m.m.a.RequestMappingHandlerMapping:549] - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+11-11 13:50:42.228 [ INFO] [       o.s.w.s.h.SimpleUrlHandlerMapping:373] - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+11-11 13:50:42.228 [ INFO] [       o.s.w.s.h.SimpleUrlHandlerMapping:373] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+11-11 13:50:42.262 [ INFO] [   o.s.b.a.w.s.WelcomePageHandlerMapping: 56] - Adding welcome page: class path resource [static/index.html]
+11-11 13:50:42.413 [ INFO] [       o.s.j.e.a.AnnotationMBeanExporter:433] - Registering beans for JMX exposure on startup
+11-11 13:50:42.415 [ INFO] [       o.s.j.e.a.AnnotationMBeanExporter:895] - Bean with name 'dataSource' has been autodetected for JMX exposure
+11-11 13:50:42.418 [ INFO] [       o.s.j.e.a.AnnotationMBeanExporter:668] - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+11-11 13:50:42.444 [ INFO] [               o.a.c.h.Http11NioProtocol:180] - Starting ProtocolHandler ["http-nio-8080"]
+11-11 13:50:42.451 [ INFO] [               o.a.t.u.n.NioSelectorPool:180] - Using a shared selector for servlet write/read
+11-11 13:50:42.460 [ INFO] [             o.s.b.w.e.t.TomcatWebServer:206] - Tomcat started on port(s): 8080 (http) with context path ''
+11-11 13:50:42.463 [ INFO] [                    c.t.f.FlyApplication: 59] - Started FlyApplication in 3.218 seconds (JVM running for 3.858)
+11-11 13:51:02.907 [ INFO] [                       o.a.c.c.C.[.[.[/]:180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+11-11 13:51:02.907 [ INFO] [               o.s.w.s.DispatcherServlet:494] - FrameworkServlet 'dispatcherServlet': initialization started
+11-11 13:51:02.934 [ INFO] [               o.s.w.s.DispatcherServlet:509] - FrameworkServlet 'dispatcherServlet': initialization completed in 27 ms
+11-11 13:51:03.383 [ INFO] [                  c.z.h.HikariDataSource:110] - DatebookHikariCP - Starting...
+11-11 13:51:03.629 [ INFO] [                  c.z.h.HikariDataSource:123] - DatebookHikariCP - Start completed.
+11-11 13:51:03.658 [ INFO] [       o.s.b.f.x.XmlBeanDefinitionReader:317] - Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+11-11 13:51:27.732 [ INFO] [                    c.t.f.FlyApplication: 50] - Starting FlyApplication on wxs with PID 1052 (D:\fly\target\classes started by Administrator in D:\fly)
+11-11 13:51:27.734 [ INFO] [                    c.t.f.FlyApplication:680] - No active profile set, falling back to default profiles: default
+11-11 13:51:27.763 [ INFO] [ConfigServletWebServerApplicationContext:590] - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2f465398: startup date [Sun Nov 11 13:51:27 CST 2018]; root of context hierarchy
+11-11 13:51:28.822 [ INFO] [             o.s.b.w.e.t.TomcatWebServer: 91] - Tomcat initialized with port(s): 8080 (http)
+11-11 13:51:28.840 [ INFO] [               o.a.c.h.Http11NioProtocol:180] - Initializing ProtocolHandler ["http-nio-8080"]
+11-11 13:51:28.850 [ INFO] [                 o.a.c.c.StandardService:180] - Starting service [Tomcat]
+11-11 13:51:28.850 [ INFO] [                  o.a.c.c.StandardEngine:180] - Starting Servlet Engine: Apache Tomcat/8.5.34
+11-11 13:51:28.854 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - Loaded APR based Apache Tomcat Native library [1.2.17] using APR version [1.6.3].
+11-11 13:51:28.854 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+11-11 13:51:28.854 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+11-11 13:51:29.871 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - OpenSSL successfully initialized [OpenSSL 1.0.2o  27 Mar 2018]
+11-11 13:51:29.965 [ INFO] [                       o.a.c.c.C.[.[.[/]:180] - Initializing Spring embedded WebApplicationContext
+11-11 13:51:29.965 [ INFO] [                   o.s.w.c.ContextLoader:285] - Root WebApplicationContext: initialization completed in 2205 ms
+11-11 13:51:30.013 [ INFO] [       o.s.b.w.s.ServletRegistrationBean:187] - Servlet dispatcherServlet mapped to [/]
+11-11 13:51:30.016 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'characterEncodingFilter' to: [/*]
+11-11 13:51:30.016 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+11-11 13:51:30.016 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+11-11 13:51:30.016 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'requestContextFilter' to: [/*]
+11-11 13:51:30.332 [ INFO] [       o.s.w.s.h.SimpleUrlHandlerMapping:373] - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+11-11 13:51:30.552 [ INFO] [s.w.s.m.m.a.RequestMappingHandlerAdapter:588] - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2f465398: startup date [Sun Nov 11 13:51:27 CST 2018]; root of context hierarchy
+11-11 13:51:30.589 [ INFO] [s.w.s.m.m.a.RequestMappingHandlerMapping:549] - Mapped "{[/locate],methods=[POST]}" onto public com.test.fly.common.ServerResponse<java.util.List> com.test.fly.controller.UserController.locate()
+11-11 13:51:30.595 [ INFO] [s.w.s.m.m.a.RequestMappingHandlerMapping:549] - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+11-11 13:51:30.595 [ INFO] [s.w.s.m.m.a.RequestMappingHandlerMapping:549] - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+11-11 13:51:30.638 [ INFO] [       o.s.w.s.h.SimpleUrlHandlerMapping:373] - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+11-11 13:51:30.638 [ INFO] [       o.s.w.s.h.SimpleUrlHandlerMapping:373] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+11-11 13:51:30.672 [ INFO] [   o.s.b.a.w.s.WelcomePageHandlerMapping: 56] - Adding welcome page: class path resource [static/index.html]
+11-11 13:51:30.871 [ INFO] [       o.s.j.e.a.AnnotationMBeanExporter:433] - Registering beans for JMX exposure on startup
+11-11 13:51:30.872 [ INFO] [       o.s.j.e.a.AnnotationMBeanExporter:895] - Bean with name 'dataSource' has been autodetected for JMX exposure
+11-11 13:51:30.876 [ INFO] [       o.s.j.e.a.AnnotationMBeanExporter:668] - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+11-11 13:51:30.918 [ INFO] [               o.a.c.h.Http11NioProtocol:180] - Starting ProtocolHandler ["http-nio-8080"]
+11-11 13:51:30.924 [ INFO] [               o.a.t.u.n.NioSelectorPool:180] - Using a shared selector for servlet write/read
+11-11 13:51:30.934 [ INFO] [             o.s.b.w.e.t.TomcatWebServer:206] - Tomcat started on port(s): 8080 (http) with context path ''
+11-11 13:51:30.936 [ INFO] [                    c.t.f.FlyApplication: 59] - Started FlyApplication in 3.43 seconds (JVM running for 4.131)
+11-11 13:51:33.865 [ INFO] [                       o.a.c.c.C.[.[.[/]:180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+11-11 13:51:33.865 [ INFO] [               o.s.w.s.DispatcherServlet:494] - FrameworkServlet 'dispatcherServlet': initialization started
+11-11 13:51:33.883 [ INFO] [               o.s.w.s.DispatcherServlet:509] - FrameworkServlet 'dispatcherServlet': initialization completed in 18 ms
+11-11 13:51:34.309 [ INFO] [                  c.z.h.HikariDataSource:110] - DatebookHikariCP - Starting...
+11-11 13:51:34.528 [ INFO] [                  c.z.h.HikariDataSource:123] - DatebookHikariCP - Start completed.
+11-11 13:53:24.628 [ INFO] [                    c.t.f.FlyApplication: 50] - Starting FlyApplication on wxs with PID 4664 (D:\fly\target\classes started by Administrator in D:\fly)
+11-11 13:53:24.629 [ INFO] [                    c.t.f.FlyApplication:680] - No active profile set, falling back to default profiles: default
+11-11 13:53:24.658 [ INFO] [ConfigServletWebServerApplicationContext:590] - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3098cf3b: startup date [Sun Nov 11 13:53:24 CST 2018]; root of context hierarchy
+11-11 13:53:25.679 [ INFO] [             o.s.b.w.e.t.TomcatWebServer: 91] - Tomcat initialized with port(s): 8080 (http)
+11-11 13:53:25.689 [ INFO] [               o.a.c.h.Http11NioProtocol:180] - Initializing ProtocolHandler ["http-nio-8080"]
+11-11 13:53:25.697 [ INFO] [                 o.a.c.c.StandardService:180] - Starting service [Tomcat]
+11-11 13:53:25.697 [ INFO] [                  o.a.c.c.StandardEngine:180] - Starting Servlet Engine: Apache Tomcat/8.5.34
+11-11 13:53:25.701 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - Loaded APR based Apache Tomcat Native library [1.2.17] using APR version [1.6.3].
+11-11 13:53:25.701 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+11-11 13:53:25.701 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+11-11 13:53:26.731 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - OpenSSL successfully initialized [OpenSSL 1.0.2o  27 Mar 2018]
+11-11 13:53:26.817 [ INFO] [                       o.a.c.c.C.[.[.[/]:180] - Initializing Spring embedded WebApplicationContext
+11-11 13:53:26.817 [ INFO] [                   o.s.w.c.ContextLoader:285] - Root WebApplicationContext: initialization completed in 2162 ms
+11-11 13:53:26.867 [ INFO] [       o.s.b.w.s.ServletRegistrationBean:187] - Servlet dispatcherServlet mapped to [/]
+11-11 13:53:26.870 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'characterEncodingFilter' to: [/*]
+11-11 13:53:26.871 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+11-11 13:53:26.871 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+11-11 13:53:26.871 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'requestContextFilter' to: [/*]
+11-11 13:53:27.161 [ INFO] [       o.s.w.s.h.SimpleUrlHandlerMapping:373] - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+11-11 13:53:27.389 [ INFO] [s.w.s.m.m.a.RequestMappingHandlerAdapter:588] - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3098cf3b: startup date [Sun Nov 11 13:53:24 CST 2018]; root of context hierarchy
+11-11 13:53:27.427 [ INFO] [s.w.s.m.m.a.RequestMappingHandlerMapping:549] - Mapped "{[/locate],methods=[POST]}" onto public com.test.fly.common.ServerResponse<java.util.List> com.test.fly.controller.UserController.locate()
+11-11 13:53:27.433 [ INFO] [s.w.s.m.m.a.RequestMappingHandlerMapping:549] - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+11-11 13:53:27.433 [ INFO] [s.w.s.m.m.a.RequestMappingHandlerMapping:549] - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+11-11 13:53:27.483 [ INFO] [       o.s.w.s.h.SimpleUrlHandlerMapping:373] - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+11-11 13:53:27.483 [ INFO] [       o.s.w.s.h.SimpleUrlHandlerMapping:373] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+11-11 13:53:27.540 [ INFO] [   o.s.b.a.w.s.WelcomePageHandlerMapping: 56] - Adding welcome page: class path resource [static/index.html]
+11-11 13:53:27.709 [ INFO] [       o.s.j.e.a.AnnotationMBeanExporter:433] - Registering beans for JMX exposure on startup
+11-11 13:53:27.710 [ INFO] [       o.s.j.e.a.AnnotationMBeanExporter:895] - Bean with name 'dataSource' has been autodetected for JMX exposure
+11-11 13:53:27.714 [ INFO] [       o.s.j.e.a.AnnotationMBeanExporter:668] - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+11-11 13:53:27.742 [ INFO] [               o.a.c.h.Http11NioProtocol:180] - Starting ProtocolHandler ["http-nio-8080"]
+11-11 13:53:27.749 [ INFO] [               o.a.t.u.n.NioSelectorPool:180] - Using a shared selector for servlet write/read
+11-11 13:53:27.759 [ INFO] [             o.s.b.w.e.t.TomcatWebServer:206] - Tomcat started on port(s): 8080 (http) with context path ''
+11-11 13:53:27.761 [ INFO] [                    c.t.f.FlyApplication: 59] - Started FlyApplication in 3.353 seconds (JVM running for 3.965)
+11-11 13:53:30.832 [ INFO] [                       o.a.c.c.C.[.[.[/]:180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+11-11 13:53:30.832 [ INFO] [               o.s.w.s.DispatcherServlet:494] - FrameworkServlet 'dispatcherServlet': initialization started
+11-11 13:53:30.847 [ INFO] [               o.s.w.s.DispatcherServlet:509] - FrameworkServlet 'dispatcherServlet': initialization completed in 15 ms
+11-11 13:53:31.296 [ INFO] [                  c.z.h.HikariDataSource:110] - DatebookHikariCP - Starting...
+11-11 13:53:31.507 [ INFO] [                  c.z.h.HikariDataSource:123] - DatebookHikariCP - Start completed.
+11-11 13:56:22.260 [ INFO] [                    c.t.f.FlyApplication: 50] - Starting FlyApplication on wxs with PID 14256 (D:\fly\target\classes started by Administrator in D:\fly)
+11-11 13:56:22.261 [ INFO] [                    c.t.f.FlyApplication:680] - No active profile set, falling back to default profiles: default
+11-11 13:56:22.292 [ INFO] [ConfigServletWebServerApplicationContext:590] - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@10d68fcd: startup date [Sun Nov 11 13:56:22 CST 2018]; root of context hierarchy
+11-11 13:56:23.254 [ INFO] [             o.s.b.w.e.t.TomcatWebServer: 91] - Tomcat initialized with port(s): 8080 (http)
+11-11 13:56:23.276 [ INFO] [               o.a.c.h.Http11NioProtocol:180] - Initializing ProtocolHandler ["http-nio-8080"]
+11-11 13:56:23.283 [ INFO] [                 o.a.c.c.StandardService:180] - Starting service [Tomcat]
+11-11 13:56:23.283 [ INFO] [                  o.a.c.c.StandardEngine:180] - Starting Servlet Engine: Apache Tomcat/8.5.34
+11-11 13:56:23.287 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - Loaded APR based Apache Tomcat Native library [1.2.17] using APR version [1.6.3].
+11-11 13:56:23.287 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+11-11 13:56:23.287 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+11-11 13:56:24.311 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - OpenSSL successfully initialized [OpenSSL 1.0.2o  27 Mar 2018]
+11-11 13:56:24.405 [ INFO] [                       o.a.c.c.C.[.[.[/]:180] - Initializing Spring embedded WebApplicationContext
+11-11 13:56:24.406 [ INFO] [                   o.s.w.c.ContextLoader:285] - Root WebApplicationContext: initialization completed in 2117 ms
+11-11 13:56:24.452 [ INFO] [       o.s.b.w.s.ServletRegistrationBean:187] - Servlet dispatcherServlet mapped to [/]
+11-11 13:56:24.455 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'characterEncodingFilter' to: [/*]
+11-11 13:56:24.455 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+11-11 13:56:24.455 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+11-11 13:56:24.455 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'requestContextFilter' to: [/*]
+11-11 13:56:24.775 [ INFO] [       o.s.w.s.h.SimpleUrlHandlerMapping:373] - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+11-11 13:56:24.990 [ INFO] [s.w.s.m.m.a.RequestMappingHandlerAdapter:588] - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@10d68fcd: startup date [Sun Nov 11 13:56:22 CST 2018]; root of context hierarchy
+11-11 13:56:25.026 [ INFO] [s.w.s.m.m.a.RequestMappingHandlerMapping:549] - Mapped "{[/locate],methods=[POST]}" onto public com.test.fly.common.ServerResponse<java.util.List> com.test.fly.controller.UserController.locate()
+11-11 13:56:25.031 [ INFO] [s.w.s.m.m.a.RequestMappingHandlerMapping:549] - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+11-11 13:56:25.031 [ INFO] [s.w.s.m.m.a.RequestMappingHandlerMapping:549] - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+11-11 13:56:25.064 [ INFO] [       o.s.w.s.h.SimpleUrlHandlerMapping:373] - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+11-11 13:56:25.064 [ INFO] [       o.s.w.s.h.SimpleUrlHandlerMapping:373] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+11-11 13:56:25.097 [ INFO] [   o.s.b.a.w.s.WelcomePageHandlerMapping: 56] - Adding welcome page: class path resource [static/index.html]
+11-11 13:56:25.260 [ INFO] [       o.s.j.e.a.AnnotationMBeanExporter:433] - Registering beans for JMX exposure on startup
+11-11 13:56:25.261 [ INFO] [       o.s.j.e.a.AnnotationMBeanExporter:895] - Bean with name 'dataSource' has been autodetected for JMX exposure
+11-11 13:56:25.265 [ INFO] [       o.s.j.e.a.AnnotationMBeanExporter:668] - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+11-11 13:56:25.290 [ INFO] [               o.a.c.h.Http11NioProtocol:180] - Starting ProtocolHandler ["http-nio-8080"]
+11-11 13:56:25.296 [ INFO] [               o.a.t.u.n.NioSelectorPool:180] - Using a shared selector for servlet write/read
+11-11 13:56:25.305 [ INFO] [             o.s.b.w.e.t.TomcatWebServer:206] - Tomcat started on port(s): 8080 (http) with context path ''
+11-11 13:56:25.308 [ INFO] [                    c.t.f.FlyApplication: 59] - Started FlyApplication in 3.267 seconds (JVM running for 3.973)
+11-11 13:56:29.017 [ INFO] [                       o.a.c.c.C.[.[.[/]:180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+11-11 13:56:29.017 [ INFO] [               o.s.w.s.DispatcherServlet:494] - FrameworkServlet 'dispatcherServlet': initialization started
+11-11 13:56:29.046 [ INFO] [               o.s.w.s.DispatcherServlet:509] - FrameworkServlet 'dispatcherServlet': initialization completed in 29 ms
+11-11 13:56:29.524 [ INFO] [                  c.z.h.HikariDataSource:110] - DatebookHikariCP - Starting...
+11-11 13:56:29.738 [ INFO] [                  c.z.h.HikariDataSource:123] - DatebookHikariCP - Start completed.
+11-11 14:34:00.132 [ INFO] [                    c.t.f.FlyApplication: 50] - Starting FlyApplication on wxs with PID 11128 (D:\fly\target\classes started by Administrator in D:\fly)
+11-11 14:34:00.134 [ INFO] [                    c.t.f.FlyApplication:680] - No active profile set, falling back to default profiles: default
+11-11 14:34:00.161 [ INFO] [ConfigServletWebServerApplicationContext:590] - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@17a7f733: startup date [Sun Nov 11 14:34:00 CST 2018]; root of context hierarchy
+11-11 14:34:01.141 [ INFO] [             o.s.b.w.e.t.TomcatWebServer: 91] - Tomcat initialized with port(s): 8080 (http)
+11-11 14:34:01.156 [ INFO] [               o.a.c.h.Http11NioProtocol:180] - Initializing ProtocolHandler ["http-nio-8080"]
+11-11 14:34:01.169 [ INFO] [                 o.a.c.c.StandardService:180] - Starting service [Tomcat]
+11-11 14:34:01.169 [ INFO] [                  o.a.c.c.StandardEngine:180] - Starting Servlet Engine: Apache Tomcat/8.5.34
+11-11 14:34:01.174 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - Loaded APR based Apache Tomcat Native library [1.2.17] using APR version [1.6.3].
+11-11 14:34:01.174 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+11-11 14:34:01.174 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+11-11 14:34:02.199 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - OpenSSL successfully initialized [OpenSSL 1.0.2o  27 Mar 2018]
+11-11 14:34:02.295 [ INFO] [                       o.a.c.c.C.[.[.[/]:180] - Initializing Spring embedded WebApplicationContext
+11-11 14:34:02.295 [ INFO] [                   o.s.w.c.ContextLoader:285] - Root WebApplicationContext: initialization completed in 2136 ms
+11-11 14:34:02.342 [ INFO] [       o.s.b.w.s.ServletRegistrationBean:187] - Servlet dispatcherServlet mapped to [/]
+11-11 14:34:02.345 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'characterEncodingFilter' to: [/*]
+11-11 14:34:02.345 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+11-11 14:34:02.345 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+11-11 14:34:02.345 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'requestContextFilter' to: [/*]
+11-11 14:34:02.614 [ INFO] [       o.s.w.s.h.SimpleUrlHandlerMapping:373] - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+11-11 14:34:02.828 [ INFO] [s.w.s.m.m.a.RequestMappingHandlerAdapter:588] - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@17a7f733: startup date [Sun Nov 11 14:34:00 CST 2018]; root of context hierarchy
+11-11 14:34:02.863 [ INFO] [s.w.s.m.m.a.RequestMappingHandlerMapping:549] - Mapped "{[/locate],methods=[POST]}" onto public com.test.fly.common.ServerResponse<java.util.List> com.test.fly.controller.UserController.locate()
+11-11 14:34:02.868 [ INFO] [s.w.s.m.m.a.RequestMappingHandlerMapping:549] - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+11-11 14:34:02.868 [ INFO] [s.w.s.m.m.a.RequestMappingHandlerMapping:549] - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+11-11 14:34:02.902 [ INFO] [       o.s.w.s.h.SimpleUrlHandlerMapping:373] - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+11-11 14:34:02.903 [ INFO] [       o.s.w.s.h.SimpleUrlHandlerMapping:373] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+11-11 14:34:02.935 [ INFO] [   o.s.b.a.w.s.WelcomePageHandlerMapping: 56] - Adding welcome page: class path resource [static/index.html]
+11-11 14:34:03.085 [ INFO] [       o.s.j.e.a.AnnotationMBeanExporter:433] - Registering beans for JMX exposure on startup
+11-11 14:34:03.086 [ INFO] [       o.s.j.e.a.AnnotationMBeanExporter:895] - Bean with name 'dataSource' has been autodetected for JMX exposure
+11-11 14:34:03.090 [ INFO] [       o.s.j.e.a.AnnotationMBeanExporter:668] - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+11-11 14:34:03.117 [ INFO] [               o.a.c.h.Http11NioProtocol:180] - Starting ProtocolHandler ["http-nio-8080"]
+11-11 14:34:03.123 [ INFO] [               o.a.t.u.n.NioSelectorPool:180] - Using a shared selector for servlet write/read
+11-11 14:34:03.140 [ INFO] [             o.s.b.w.e.t.TomcatWebServer:206] - Tomcat started on port(s): 8080 (http) with context path ''
+11-11 14:34:03.147 [ INFO] [                    c.t.f.FlyApplication: 59] - Started FlyApplication in 3.246 seconds (JVM running for 3.843)
+11-11 14:34:09.956 [ INFO] [                       o.a.c.c.C.[.[.[/]:180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+11-11 14:34:09.956 [ INFO] [               o.s.w.s.DispatcherServlet:494] - FrameworkServlet 'dispatcherServlet': initialization started
+11-11 14:34:09.971 [ INFO] [               o.s.w.s.DispatcherServlet:509] - FrameworkServlet 'dispatcherServlet': initialization completed in 15 ms
+11-11 14:34:10.377 [ INFO] [                  c.z.h.HikariDataSource:110] - DatebookHikariCP - Starting...
+11-11 14:34:10.598 [ INFO] [                  c.z.h.HikariDataSource:123] - DatebookHikariCP - Start completed.
+11-11 14:49:14.694 [ INFO] [                    c.t.f.FlyApplication: 50] - Starting FlyApplication on wxs with PID 11136 (D:\fly\target\classes started by Administrator in D:\fly)
+11-11 14:49:14.696 [ INFO] [                    c.t.f.FlyApplication:680] - No active profile set, falling back to default profiles: default
+11-11 14:49:14.726 [ INFO] [ConfigServletWebServerApplicationContext:590] - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@610f7aa: startup date [Sun Nov 11 14:49:14 CST 2018]; root of context hierarchy
+11-11 14:49:15.740 [ INFO] [             o.s.b.w.e.t.TomcatWebServer: 91] - Tomcat initialized with port(s): 8080 (http)
+11-11 14:49:15.750 [ INFO] [               o.a.c.h.Http11NioProtocol:180] - Initializing ProtocolHandler ["http-nio-8080"]
+11-11 14:49:15.757 [ INFO] [                 o.a.c.c.StandardService:180] - Starting service [Tomcat]
+11-11 14:49:15.757 [ INFO] [                  o.a.c.c.StandardEngine:180] - Starting Servlet Engine: Apache Tomcat/8.5.34
+11-11 14:49:15.762 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - Loaded APR based Apache Tomcat Native library [1.2.17] using APR version [1.6.3].
+11-11 14:49:15.762 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+11-11 14:49:15.763 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+11-11 14:49:16.798 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - OpenSSL successfully initialized [OpenSSL 1.0.2o  27 Mar 2018]
+11-11 14:49:16.868 [ INFO] [                       o.a.c.c.C.[.[.[/]:180] - Initializing Spring embedded WebApplicationContext
+11-11 14:49:16.868 [ INFO] [                   o.s.w.c.ContextLoader:285] - Root WebApplicationContext: initialization completed in 2145 ms
+11-11 14:49:16.915 [ INFO] [       o.s.b.w.s.ServletRegistrationBean:187] - Servlet dispatcherServlet mapped to [/]
+11-11 14:49:16.917 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'characterEncodingFilter' to: [/*]
+11-11 14:49:16.918 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+11-11 14:49:16.918 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+11-11 14:49:16.918 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'requestContextFilter' to: [/*]
+11-11 14:49:17.235 [ INFO] [       o.s.w.s.h.SimpleUrlHandlerMapping:373] - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+11-11 14:49:17.441 [ INFO] [s.w.s.m.m.a.RequestMappingHandlerAdapter:588] - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@610f7aa: startup date [Sun Nov 11 14:49:14 CST 2018]; root of context hierarchy
+11-11 14:49:17.476 [ INFO] [s.w.s.m.m.a.RequestMappingHandlerMapping:549] - Mapped "{[/locate],methods=[POST]}" onto public com.test.fly.common.ServerResponse<java.util.List> com.test.fly.controller.UserController.Locate()
+11-11 14:49:17.481 [ INFO] [s.w.s.m.m.a.RequestMappingHandlerMapping:549] - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+11-11 14:49:17.482 [ INFO] [s.w.s.m.m.a.RequestMappingHandlerMapping:549] - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+11-11 14:49:17.515 [ INFO] [       o.s.w.s.h.SimpleUrlHandlerMapping:373] - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+11-11 14:49:17.515 [ INFO] [       o.s.w.s.h.SimpleUrlHandlerMapping:373] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+11-11 14:49:17.549 [ INFO] [   o.s.b.a.w.s.WelcomePageHandlerMapping: 56] - Adding welcome page: class path resource [static/index.html]
+11-11 14:49:17.774 [ INFO] [       o.s.j.e.a.AnnotationMBeanExporter:433] - Registering beans for JMX exposure on startup
+11-11 14:49:17.775 [ INFO] [       o.s.j.e.a.AnnotationMBeanExporter:895] - Bean with name 'dataSource' has been autodetected for JMX exposure
+11-11 14:49:17.779 [ INFO] [       o.s.j.e.a.AnnotationMBeanExporter:668] - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+11-11 14:49:17.805 [ INFO] [               o.a.c.h.Http11NioProtocol:180] - Starting ProtocolHandler ["http-nio-8080"]
+11-11 14:49:17.813 [ INFO] [               o.a.t.u.n.NioSelectorPool:180] - Using a shared selector for servlet write/read
+11-11 14:49:17.830 [ INFO] [             o.s.b.w.e.t.TomcatWebServer:206] - Tomcat started on port(s): 8080 (http) with context path ''
+11-11 14:49:17.836 [ INFO] [                    c.t.f.FlyApplication: 59] - Started FlyApplication in 3.373 seconds (JVM running for 3.961)
+11-11 14:49:22.037 [ INFO] [                       o.a.c.c.C.[.[.[/]:180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+11-11 14:49:22.037 [ INFO] [               o.s.w.s.DispatcherServlet:494] - FrameworkServlet 'dispatcherServlet': initialization started
+11-11 14:49:22.059 [ INFO] [               o.s.w.s.DispatcherServlet:509] - FrameworkServlet 'dispatcherServlet': initialization completed in 22 ms
+11-11 14:49:22.469 [ INFO] [                  c.z.h.HikariDataSource:110] - DatebookHikariCP - Starting...
+11-11 14:49:22.690 [ INFO] [                  c.z.h.HikariDataSource:123] - DatebookHikariCP - Start completed.
+11-11 19:30:46.953 [ INFO] [                    c.t.f.FlyApplication: 50] - Starting FlyApplication on wxs with PID 7688 (D:\fly\target\classes started by Administrator in D:\fly)
+11-11 19:30:46.955 [ INFO] [                    c.t.f.FlyApplication:680] - No active profile set, falling back to default profiles: default
+11-11 19:30:47.003 [ INFO] [ConfigServletWebServerApplicationContext:590] - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@484970b0: startup date [Sun Nov 11 19:30:46 CST 2018]; root of context hierarchy
+11-11 19:30:48.165 [ INFO] [             o.s.b.w.e.t.TomcatWebServer: 91] - Tomcat initialized with port(s): 8080 (http)
+11-11 19:30:48.177 [ INFO] [               o.a.c.h.Http11NioProtocol:180] - Initializing ProtocolHandler ["http-nio-8080"]
+11-11 19:30:48.193 [ INFO] [                 o.a.c.c.StandardService:180] - Starting service [Tomcat]
+11-11 19:30:48.194 [ INFO] [                  o.a.c.c.StandardEngine:180] - Starting Servlet Engine: Apache Tomcat/8.5.34
+11-11 19:30:48.200 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - Loaded APR based Apache Tomcat Native library [1.2.17] using APR version [1.6.3].
+11-11 19:30:48.200 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+11-11 19:30:48.200 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+11-11 19:30:49.235 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - OpenSSL successfully initialized [OpenSSL 1.0.2o  27 Mar 2018]
+11-11 19:30:49.324 [ INFO] [                       o.a.c.c.C.[.[.[/]:180] - Initializing Spring embedded WebApplicationContext
+11-11 19:30:49.324 [ INFO] [                   o.s.w.c.ContextLoader:285] - Root WebApplicationContext: initialization completed in 2326 ms
+11-11 19:30:49.371 [ INFO] [       o.s.b.w.s.ServletRegistrationBean:187] - Servlet dispatcherServlet mapped to [/]
+11-11 19:30:49.374 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'characterEncodingFilter' to: [/*]
+11-11 19:30:49.374 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+11-11 19:30:49.374 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+11-11 19:30:49.374 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'requestContextFilter' to: [/*]
+11-11 19:30:49.740 [ INFO] [       o.s.w.s.h.SimpleUrlHandlerMapping:373] - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+11-11 19:30:49.883 [ INFO] [s.w.s.m.m.a.RequestMappingHandlerAdapter:588] - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@484970b0: startup date [Sun Nov 11 19:30:46 CST 2018]; root of context hierarchy
+11-11 19:30:49.939 [ INFO] [s.w.s.m.m.a.RequestMappingHandlerMapping:549] - Mapped "{[/locate],methods=[POST]}" onto public com.test.fly.common.ServerResponse<java.util.List<java.util.Date>> com.test.fly.controller.UserController.Locate()
+11-11 19:30:49.944 [ INFO] [s.w.s.m.m.a.RequestMappingHandlerMapping:549] - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+11-11 19:30:49.944 [ INFO] [s.w.s.m.m.a.RequestMappingHandlerMapping:549] - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+11-11 19:30:49.978 [ INFO] [       o.s.w.s.h.SimpleUrlHandlerMapping:373] - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+11-11 19:30:49.978 [ INFO] [       o.s.w.s.h.SimpleUrlHandlerMapping:373] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+11-11 19:30:50.098 [ INFO] [   o.s.b.a.w.s.WelcomePageHandlerMapping: 56] - Adding welcome page: class path resource [static/index.html]
+11-11 19:30:50.275 [ INFO] [       o.s.j.e.a.AnnotationMBeanExporter:433] - Registering beans for JMX exposure on startup
+11-11 19:30:50.276 [ INFO] [       o.s.j.e.a.AnnotationMBeanExporter:895] - Bean with name 'dataSource' has been autodetected for JMX exposure
+11-11 19:30:50.280 [ INFO] [       o.s.j.e.a.AnnotationMBeanExporter:668] - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+11-11 19:30:50.311 [ INFO] [               o.a.c.h.Http11NioProtocol:180] - Starting ProtocolHandler ["http-nio-8080"]
+11-11 19:30:50.321 [ INFO] [               o.a.t.u.n.NioSelectorPool:180] - Using a shared selector for servlet write/read
+11-11 19:30:50.335 [ INFO] [             o.s.b.w.e.t.TomcatWebServer:206] - Tomcat started on port(s): 8080 (http) with context path ''
+11-11 19:30:50.338 [ INFO] [                    c.t.f.FlyApplication: 59] - Started FlyApplication in 3.668 seconds (JVM running for 4.517)
+11-11 19:31:02.591 [ INFO] [                       o.a.c.c.C.[.[.[/]:180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+11-11 19:31:02.591 [ INFO] [               o.s.w.s.DispatcherServlet:494] - FrameworkServlet 'dispatcherServlet': initialization started
+11-11 19:31:02.607 [ INFO] [               o.s.w.s.DispatcherServlet:509] - FrameworkServlet 'dispatcherServlet': initialization completed in 16 ms
+11-11 19:31:03.273 [ INFO] [                  c.z.h.HikariDataSource:110] - DatebookHikariCP - Starting...
+11-11 19:31:03.527 [ INFO] [                  c.z.h.HikariDataSource:123] - DatebookHikariCP - Start completed.
+11-11 20:18:23.279 [ INFO] [                    c.t.f.FlyApplication: 50] - Starting FlyApplication on wxs with PID 12344 (D:\fly\target\classes started by Administrator in D:\fly)
+11-11 20:18:23.280 [ INFO] [                    c.t.f.FlyApplication:680] - No active profile set, falling back to default profiles: default
+11-11 20:18:23.310 [ INFO] [ConfigServletWebServerApplicationContext:590] - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2638011: startup date [Sun Nov 11 20:18:23 CST 2018]; root of context hierarchy
+11-11 20:18:24.403 [ INFO] [             o.s.b.w.e.t.TomcatWebServer: 91] - Tomcat initialized with port(s): 8080 (http)
+11-11 20:18:24.424 [ INFO] [               o.a.c.h.Http11NioProtocol:180] - Initializing ProtocolHandler ["http-nio-8080"]
+11-11 20:18:24.438 [ INFO] [                 o.a.c.c.StandardService:180] - Starting service [Tomcat]
+11-11 20:18:24.439 [ INFO] [                  o.a.c.c.StandardEngine:180] - Starting Servlet Engine: Apache Tomcat/8.5.34
+11-11 20:18:24.446 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - Loaded APR based Apache Tomcat Native library [1.2.17] using APR version [1.6.3].
+11-11 20:18:24.447 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+11-11 20:18:24.447 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+11-11 20:18:25.487 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - OpenSSL successfully initialized [OpenSSL 1.0.2o  27 Mar 2018]
+11-11 20:18:25.588 [ INFO] [                       o.a.c.c.C.[.[.[/]:180] - Initializing Spring embedded WebApplicationContext
+11-11 20:18:25.589 [ INFO] [                   o.s.w.c.ContextLoader:285] - Root WebApplicationContext: initialization completed in 2281 ms
+11-11 20:18:25.648 [ INFO] [       o.s.b.w.s.ServletRegistrationBean:187] - Servlet dispatcherServlet mapped to [/]
+11-11 20:18:25.651 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'characterEncodingFilter' to: [/*]
+11-11 20:18:25.651 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+11-11 20:18:25.651 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+11-11 20:18:25.651 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'requestContextFilter' to: [/*]
+11-11 20:18:25.952 [ INFO] [       o.s.w.s.h.SimpleUrlHandlerMapping:373] - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+11-11 20:18:26.160 [ INFO] [s.w.s.m.m.a.RequestMappingHandlerAdapter:588] - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2638011: startup date [Sun Nov 11 20:18:23 CST 2018]; root of context hierarchy
+11-11 20:18:26.205 [ INFO] [s.w.s.m.m.a.RequestMappingHandlerMapping:549] - Mapped "{[/locate],methods=[POST]}" onto public com.test.fly.common.ServerResponse<java.util.List<com.test.fly.pojo.Data>> com.test.fly.controller.UserController.getLocate()
+11-11 20:18:26.213 [ INFO] [s.w.s.m.m.a.RequestMappingHandlerMapping:549] - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+11-11 20:18:26.213 [ INFO] [s.w.s.m.m.a.RequestMappingHandlerMapping:549] - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+11-11 20:18:26.246 [ INFO] [       o.s.w.s.h.SimpleUrlHandlerMapping:373] - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+11-11 20:18:26.246 [ INFO] [       o.s.w.s.h.SimpleUrlHandlerMapping:373] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+11-11 20:18:26.280 [ INFO] [   o.s.b.a.w.s.WelcomePageHandlerMapping: 56] - Adding welcome page: class path resource [static/index.html]
+11-11 20:18:26.452 [ INFO] [       o.s.j.e.a.AnnotationMBeanExporter:433] - Registering beans for JMX exposure on startup
+11-11 20:18:26.453 [ INFO] [       o.s.j.e.a.AnnotationMBeanExporter:895] - Bean with name 'dataSource' has been autodetected for JMX exposure
+11-11 20:18:26.457 [ INFO] [       o.s.j.e.a.AnnotationMBeanExporter:668] - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+11-11 20:18:26.483 [ INFO] [               o.a.c.h.Http11NioProtocol:180] - Starting ProtocolHandler ["http-nio-8080"]
+11-11 20:18:26.492 [ INFO] [               o.a.t.u.n.NioSelectorPool:180] - Using a shared selector for servlet write/read
+11-11 20:18:26.504 [ INFO] [             o.s.b.w.e.t.TomcatWebServer:206] - Tomcat started on port(s): 8080 (http) with context path ''
+11-11 20:18:26.509 [ INFO] [                    c.t.f.FlyApplication: 59] - Started FlyApplication in 3.466 seconds (JVM running for 4.076)
+11-11 20:19:00.509 [ INFO] [                       o.a.c.c.C.[.[.[/]:180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+11-11 20:19:00.509 [ INFO] [               o.s.w.s.DispatcherServlet:494] - FrameworkServlet 'dispatcherServlet': initialization started
+11-11 20:19:00.544 [ INFO] [               o.s.w.s.DispatcherServlet:509] - FrameworkServlet 'dispatcherServlet': initialization completed in 35 ms
+11-11 20:19:09.023 [ INFO] [                  c.z.h.HikariDataSource:110] - DatebookHikariCP - Starting...
+11-11 20:19:09.261 [ INFO] [                  c.z.h.HikariDataSource:123] - DatebookHikariCP - Start completed.
+11-11 21:42:44.213 [ INFO] [                    c.t.f.FlyApplication: 50] - Starting FlyApplication on wxs with PID 12196 (D:\fly\target\classes started by Administrator in D:\fly)
+11-11 21:42:44.215 [ INFO] [                    c.t.f.FlyApplication:680] - No active profile set, falling back to default profiles: default
+11-11 21:42:44.247 [ INFO] [ConfigServletWebServerApplicationContext:590] - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@683dbc2c: startup date [Sun Nov 11 21:42:44 CST 2018]; root of context hierarchy
+11-11 21:42:45.292 [ INFO] [             o.s.b.w.e.t.TomcatWebServer: 91] - Tomcat initialized with port(s): 8080 (http)
+11-11 21:42:45.302 [ INFO] [               o.a.c.h.Http11NioProtocol:180] - Initializing ProtocolHandler ["http-nio-8080"]
+11-11 21:42:45.309 [ INFO] [                 o.a.c.c.StandardService:180] - Starting service [Tomcat]
+11-11 21:42:45.310 [ INFO] [                  o.a.c.c.StandardEngine:180] - Starting Servlet Engine: Apache Tomcat/8.5.34
+11-11 21:42:45.315 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - Loaded APR based Apache Tomcat Native library [1.2.17] using APR version [1.6.3].
+11-11 21:42:45.315 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+11-11 21:42:45.315 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+11-11 21:42:46.351 [ INFO] [            o.a.c.c.AprLifecycleListener:180] - OpenSSL successfully initialized [OpenSSL 1.0.2o  27 Mar 2018]
+11-11 21:42:46.440 [ INFO] [                       o.a.c.c.C.[.[.[/]:180] - Initializing Spring embedded WebApplicationContext
+11-11 21:42:46.440 [ INFO] [                   o.s.w.c.ContextLoader:285] - Root WebApplicationContext: initialization completed in 2195 ms
+11-11 21:42:46.520 [ INFO] [       o.s.b.w.s.ServletRegistrationBean:187] - Servlet dispatcherServlet mapped to [/]
+11-11 21:42:46.524 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'characterEncodingFilter' to: [/*]
+11-11 21:42:46.524 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+11-11 21:42:46.524 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+11-11 21:42:46.524 [ INFO] [        o.s.b.w.s.FilterRegistrationBean:245] - Mapping filter: 'requestContextFilter' to: [/*]
+11-11 21:42:46.808 [ INFO] [       o.s.w.s.h.SimpleUrlHandlerMapping:373] - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+11-11 21:42:47.015 [ INFO] [s.w.s.m.m.a.RequestMappingHandlerAdapter:588] - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@683dbc2c: startup date [Sun Nov 11 21:42:44 CST 2018]; root of context hierarchy
+11-11 21:42:47.050 [ INFO] [s.w.s.m.m.a.RequestMappingHandlerMapping:549] - Mapped "{[/locate],methods=[POST]}" onto public com.test.fly.common.ServerResponse<java.util.List<com.test.fly.pojo.Data>> com.test.fly.controller.UserController.getLocate()
+11-11 21:42:47.055 [ INFO] [s.w.s.m.m.a.RequestMappingHandlerMapping:549] - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+11-11 21:42:47.056 [ INFO] [s.w.s.m.m.a.RequestMappingHandlerMapping:549] - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+11-11 21:42:47.093 [ INFO] [       o.s.w.s.h.SimpleUrlHandlerMapping:373] - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+11-11 21:42:47.093 [ INFO] [       o.s.w.s.h.SimpleUrlHandlerMapping:373] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+11-11 21:42:47.127 [ INFO] [   o.s.b.a.w.s.WelcomePageHandlerMapping: 56] - Adding welcome page: class path resource [static/index.html]
+11-11 21:42:47.290 [ INFO] [       o.s.j.e.a.AnnotationMBeanExporter:433] - Registering beans for JMX exposure on startup
+11-11 21:42:47.291 [ INFO] [       o.s.j.e.a.AnnotationMBeanExporter:895] - Bean with name 'dataSource' has been autodetected for JMX exposure
+11-11 21:42:47.295 [ INFO] [       o.s.j.e.a.AnnotationMBeanExporter:668] - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+11-11 21:42:47.321 [ INFO] [               o.a.c.h.Http11NioProtocol:180] - Starting ProtocolHandler ["http-nio-8080"]
+11-11 21:42:47.328 [ INFO] [               o.a.t.u.n.NioSelectorPool:180] - Using a shared selector for servlet write/read
+11-11 21:42:47.339 [ INFO] [             o.s.b.w.e.t.TomcatWebServer:206] - Tomcat started on port(s): 8080 (http) with context path ''
+11-11 21:42:47.342 [ INFO] [                    c.t.f.FlyApplication: 59] - Started FlyApplication in 3.358 seconds (JVM running for 3.944)
+11-11 21:42:54.717 [ INFO] [                       o.a.c.c.C.[.[.[/]:180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+11-11 21:42:54.717 [ INFO] [               o.s.w.s.DispatcherServlet:494] - FrameworkServlet 'dispatcherServlet': initialization started
+11-11 21:42:54.743 [ INFO] [               o.s.w.s.DispatcherServlet:509] - FrameworkServlet 'dispatcherServlet': initialization completed in 26 ms
+11-11 21:42:55.122 [ INFO] [                  c.z.h.HikariDataSource:110] - DatebookHikariCP - Starting...
+11-11 21:42:55.341 [ INFO] [                  c.z.h.HikariDataSource:123] - DatebookHikariCP - Start completed.

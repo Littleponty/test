@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="personal blog">
+    <meta name="author" content="wxs">
+    <title>博客内容</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700|Playfair+Display:400,700,900" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css">
+    <link rel="stylesheet" href="components/css/animate.css">
+    <link rel="stylesheet" href="components/css/main.css">
+
+    <style>
+        #user-image {
+            float: right;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark cyan fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <img src="components/images/nav-logo.png" alt="nav-logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4" aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">主页 <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="album.html">相册 </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="blog.html">我的博客</a>
+                </li>
+                <li class="dropdown user user-menu">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        <img src="components/images/user.jpg" id="user-image" alt="User Image">
+                        <span>Pursuer</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <section class="blog-single">
+        <div class="container">
+            <div class="main-contant">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h3 id="title">博客案例</h3>
+                        <div>
+                            <p style="text-align:center">
+                                作者：<a id="author" href="single.html">wxs</a>
+                                &nbsp;&nbsp;类型：<a id="type" href="single.html">旅游</a>
+                                &nbsp;&nbsp;发布时间：<a id="date" href="single.html">2019-01-02 19:53:52</a>
+                            </p>
+                        </div>
+                        <p id="content">欢迎来到我的博客</p>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js"></script>
+    <script src="components/js/animate.js"></script>
+    <script src="components/js/custom.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                type: "post",
+                url: "/query",
+                timeout: "5000",
+                async: true,
+                error: function() {
+                     alert("系统错误");
+                },
+                success: function(data) {
+                    $("#title").html(data.data[0].title);
+                    $("#author").html(data.data[0].author);
+                    $("#type").html(data.data[0].type);
+                    $("#content").html(data.data[0].content);
+                    $("#date").html(data.data[0].date);
+                }
+            });
+        })
+    </script>
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                type: "post",
+                url: "/session",
+                timeout: "5000",
+                async: true,
+                success: function(data) {
+                    if (data.status===1) {
+                        alert("请登陆！");
+                        location.href="/login.html";
+                    } else {
+                    }
+                }
+            });
+        })
+    </script>
+</body>
+</html>

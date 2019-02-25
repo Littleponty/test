@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>飞行器信息记录</title>
+
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+    <link href="../vendor/datatables-plugins/dataTables.bootstrap.css" rel="stylesheet">
+    <link href="../vendor/datatables-responsive/dataTables.responsive.css" rel="stylesheet">
+    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../vendor/metisMenu/metisMenu.min.js"></script>
+    <script src="../vendor/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="../vendor/datatables-plugins/dataTables.bootstrap.min.js"></script>
+    <script src="../vendor/datatables-responsive/dataTables.responsive.js"></script>
+    <script src="../dist/js/sb-admin-2.js"></script>
+
+
+<body class="">
+<div id="wrapper">
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../index.html">飞行器定位显示</a>
+        </div>
+        <ul class="nav navbar-top-links navbar-right">
+        </ul>
+        <div class="navbr-default sidebar" role="navigation">
+            <div class="sidebar-nav navbar-collapse">
+                <ul class="nav in" id="side-menu">
+                    <li><a href="#"><i class="fa fa-dashboard fa-fw"></i> 导航<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse in">
+                            <li><a href="../index.html">主页</a></li>
+                            <li><a href="video1.html">视频记录</a></li>
+                            <li><a href="information1.html">飞行器信息记录</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="page-wrapper" style="min-height: 712px;">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">飞行器信息记录</h1>
+                <div class="panel panel-default">
+                    <!-- /.panel-heading -->
+                    <div class="panel-body">
+                        <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
+                            <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>PM2.5</th>
+                                <th>温度</th>
+                                <th>湿度</th>
+                                <th>经度</th>
+                                <th>纬度</th>
+                                <th>时间</th>
+                                <th>MessageID</th>
+                                <th>状态</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                        <!-- /.table-responsive -->
+                    </div>
+                    <!-- /.panel-body -->
+                </div>
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+    </div>
+    <!-- /#page-wrapper -->
+</div>
+<!-- /#wrapper -->
+
+<script>
+    $(document).ready(function(){
+        $('#dataTables-example').DataTable({
+        "oLanguage": {
+            "sProcessing": "正在加载数据，请稍后...",
+            "sLengthMenu": "每页显示 _MENU_ 条记录",
+            "sZeroRecords": "没有数据！",
+            "sEmptyTable": "表中无数据存在！",
+            "sInfo": "当前显示 _START_ 到 _END_ 条，共 _TOTAL_ 条记录",
+            "sInfoEmpty": "显示0到0条记录",
+            "sInfoFiltered": "数据表中共有 _MAX_ 条记录",
+            "sSearch": "搜索:",
+            "sLoadingRecords": "载入中...",
+            "oPaginate": {
+                "sFirst": "首页",
+                "sPrevious": "上一页",
+                "sNext": "下一页",
+                "sLast": "末页"
+            }
+        },
+                ajax: {
+                    type: "post",
+                    url: "/history"
+                },
+                columns: [
+                    {"data": "id"},
+                    {"data": "pm"},
+                    {"data": "temp"},
+                    {"data": "humi"},
+                    {"data": "lon"},
+                    {"data": "lat"},
+                    {"data": "rq"},
+                    {"data": "msid"},
+                    {"data": "status"}
+                ]
+        });
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Forgot Password </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/themify-icons.css">
+    <link rel="stylesheet" href="assets/css/metisMenu.css">
+    <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all">
+    <link rel="stylesheet" href="assets/css/typography.css">
+    <link rel="stylesheet" href="assets/css/default-css.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body>
+
+<div class="login-area login-bg">
+    <div class="container">
+        <div class="login-box ptb--100">
+            <form id="forget-form">
+                <div class="login-form-head">
+                    <h4>Forgot Password</h4>
+                    <p>Hey! Forgot Password Your Password? Reset Now</p>
+                </div>
+                <div class="login-form-body">
+                    <div class="form-gp">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email">
+                        <i class="ti-lock"></i>
+                    </div>
+                    <div class="submit-btn-area mt-5">
+                        <button id="forget" type="submit">Reset <i class="ti-arrow-right"></i></button>
+                    </div>
+                    <div class="form-footer text-center mt-5">
+                        <p class="text-muted">已经找回密码? <a href="login.html">Sign in</a></p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<!-- jquery latest version -->
+<script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
+<script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
+<!-- bootstrap 4 js -->
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/owl.carousel.min.js"></script>
+<script src="assets/js/metisMenu.min.js"></script>
+<script src="assets/js/jquery.slimscroll.min.js"></script>
+<script src="assets/js/jquery.slicknav.min.js"></script>
+
+<!-- others plugins -->
+<script src="assets/js/plugins.js"></script>
+<script src="assets/js/scripts.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $("#forget").click(function () {
+            if ($("#email").val()==="" || $("#email").val()===null) {
+                alert("请输入邮箱！");
+                return false;
+            }
+            $.ajax({
+                type: "post",
+                url: "/forget",
+                timeout: "5000",
+                data:$("#forget-form").serialize(),
+                async: true,
+                error: function() {
+                },
+                success: function(data) {
+                    alert("账户："+ data.data[0].username+"\n"+"密码："+data.data[0].password);
+                }
+            });
+        });
+    })
+</script>
+
+</body>
+
+</html>

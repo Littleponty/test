@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>飞行器定位显示</title>
+    
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+    <link href="../vendor/datatables-plugins/dataTables.bootstrap.css" rel="stylesheet">
+    <link href="../vendor/datatables-responsive/dataTables.responsive.css" rel="stylesheet">
+    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../vendor/metisMenu/metisMenu.min.js"></script>
+    <script src="../vendor/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="../vendor/datatables-plugins/dataTables.bootstrap.min.js"></script>
+    <script src="../vendor/datatables-responsive/dataTables.responsive.js"></script>
+    <script src="../dist/js/sb-admin-2.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=6SRkGg4GCbHuBCta6X7pYozNnn4d65WF"></script>
+    <style type="text/css">
+	body, html,#allmap {
+		width: 100%;height: 100%;
+		margin-right: 530px;
+		overflow: hidden;
+		position: absolute;
+	}
+	</style>
+</head>
+
+<body class="">
+	<div id="wrapper">
+		<!-- Navigation -->
+		<nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="../index.html">飞行器定位显示</a>
+			</div>
+			<ul class="nav navbar-top-links navbar-right"></ul>
+			<div class="navbr-default sidebar" role="navigation">
+				<div class="sidebar-nav navbar-collapse">
+					<ul class="nav in" id="side-menu">
+						<li><a href="#"><i class="fa fa-dashboard fa-fw"></i> 导航<span class="fa arrow"></span></a>
+							<ul class="nav nav-second-level collapse in">
+								<li><a href="../index.html">主页</a></li>
+                                <li><a href="video1.html">视频记录</a></li>
+								<li><a href="information1.html">飞行器信息记录</a></li>
+							</ul>
+                        </li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<div id="page-wrapper" style="min-height: 712px;padding-left:0; ">
+			<div>
+                <div id="allmap"></div>
+    	    </div>
+		</div>
+		<!-- /#page-wrapper -->
+	</div>
+
+	<script>
+        // 百度地图API功能
+        var map = new BMap.Map("allmap",{mapType:BMAP_SATELLITE_MAP});
+        map.centerAndZoom(new BMap.Point(120.1624471935,30.3236616803), 18);  // 初始化地图,设置中心点坐标和地图级别
+        map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+        $.func = {
+            ajaxLogs: function() {
+                $.ajax({
+                    type: "post",
+                    url: "locate",
+                    success: function(data) {
+                        map.clearOverlays();//清空所有覆盖物
+                        //地图缩放控件
+                        map.addControl(new BMap.NavigationControl({
+                            anchor: BMAP_ANCHOR_TOP_RIGHT//表示控件定位于地图的左上角
+                        }));
+                        //地图模式控件
+                        map.addControl(new BMap.MapTypeControl({
+                                //type:BMAP_MAPTYPE_CONTROL_DROPDOWN,//按钮呈下拉列表方式展示
+                                anchor: BMAP_ANCHOR_TOP_LEFT//表示控件定位于地图的左上角
+                            }
+                        ));
+
+                        //添加画轨迹的数组数据
+                        var polylinePointsArray = [];
+                        for(var i=0;i<data.data.length;i++){
+                            var x = data.data[i].lon;
+                            var y =data.data[i].lat;
+                            polylinePointsArray[i] = new BMap.Point(x,y);
+                        }
+
+                        //var marker1 = new BMap.Marker(polylinePointsArray[0]);
+                        /*for (var t=1;t<data.data.length;t++){
+                            labelx[t] = new BMap.Label(t+"号坐标", {
+                                offset: new BMap.Size(10, -20)
+                            });
+                        }*/
+                        var marker = [];
+                        for(var j=0;j<data.data.length;j++){
+                            marker[j] = new BMap.Marker(polylinePointsArray[j]);
+                            var label = new BMap.Label(j+1+"号点救援点", {
+                                offset: new BMap.Size(10, -20)
+                            });
+                            map.addOverlay(marker[j]);//添加标记
+                            marker[j].setLabel(label);//添加标记标签
+                        }
+
+                        //标签的格式
+                        label.setStyle({
+                            width: "120px",
+                            color: '#fff',
+                            background: '#ff8355',
+                            border: '1px solid "#ff8355"',
+                            borderRadius: "5px",
+                            textAlign: "center",
+                            height: "26px",
+                            lineHeight: "26px"
+                        });
+                        //判断data是否有定位坐标返回
+                        /*if(polylinePointsArray[0]!=null){
+                            map.addOverlay(marker1);//添加标记
+                            marker1.setLabel(label);//添加标记标签
+                        }
+                        for(var a=0;a<data.data.length;a++){
+                            map.addOverlay(marker[a]);//添加标记
+                            marker[a].setLabel(label);//添加标记标签
+                        }*/
+
+
+                        //设置轨迹线内图标
+                        var sy = new BMap.Symbol(BMap_Symbol_SHAPE_BACKWARD_OPEN_ARROW, {
+                            scale: 0.6,//图标缩放大小
+                            strokeColor:'#fff',//设置矢量图标的线填充颜色
+                            strokeWeight: '2',//设置线宽
+                        });
+                        var icons = new BMap.IconSequence(sy, '10', '30');
+                        //轨迹线样式
+                        var polyline =new BMap.Polyline(polylinePointsArray, {
+                            enableEditing: false,//是否启用线编辑，默认为false
+                            enableClicking: true,//是否响应点击事件，默认为true
+                            icons:[icons],
+                            strokeWeight:'8',//折线的宽度，以像素为单位
+                            strokeOpacity: 0.8,//折线的透明度，取值范围0 - 1
+                            strokeColor:"#18a45b" //折线颜色
+                        });
+                        map.addOverlay(polyline);//添加轨迹线
+                        /*if(data.data.length>=2){
+                            map.addOverlay(marker2);
+                            marker2.setLabel(label2);
+                        }*/
+                    }
+                });
+            }
+        }
+
+        $(document).ready(function() {
+            do{
+                $.func.ajaxLogs();
+            }while(0);//先执行一次请求
+            window.setInterval($.func.ajaxLogs, 1000);//每五秒执行一次请求
+        });
+	</script>
+
+</body>
+</html>

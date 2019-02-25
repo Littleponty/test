@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Letter - Simple Sign Up Form</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">  <!-- Google web font "Open Sans" -->
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/demo.css" />
+  <link rel="stylesheet" href="css/templatemo-style.css">
+  
+  <script type="text/javascript" src="js/modernizr.custom.86080.js"></script>
+		
+	</head>
+
+	<body>
+			<div id="particles-js"></div>
+			<ul class="cb-slideshow">
+	            <li></li>
+	            <li></li>
+	            <li></li>
+	            <li></li>
+	            <li></li>
+	            <li></li>
+	        </ul>
+
+			<div class="container-fluid">
+				<div class="row cb-slideshow-text-container ">
+					<div class= "tm-content col-xl-6 col-sm-8 col-xs-8 ml-auto section">
+					<header class="mb-5"><h1>Chinese Medicine</h1></header>
+					<P class="mb-5">A website about traditional Chinese medicine cabinet. Thank you for visiting our site!</P>
+					
+                    <form action="user/input" method="post" id="inputFormId" class="subscribe-form">     	    	
+				  			<div class="row form-section">
+	                            <div class="col-md-9 ">
+									<select class="form-control-search"  id="COMId" name="COM" style="text-align:center">
+										<option  value="01" >1号柜</option>
+										<option  value="02" >2号柜</option>
+										<option  value="03" >3号柜</option>
+										<option  value="04" >4号柜</option>
+									</select>
+									<input type="button" class="tm-btn-subscribe" value="设置药柜" id="cabinet" />
+								</div>
+
+								<div class="col-md-9 ">
+									<select class="form-control-search"  id="portId" name="port">
+										<option  value="4800" >4800</option>
+										<option  value="9600" >9600</option>
+										<option  value="15200" >15200</option>
+									</select>
+									<input type="button" class="tm-btn-subscribe" value="设置波特率" id="rate" />
+								</div>
+								<div class="col-md-9 ">
+									<select class="form-control-search"  id="toolsId" name="tools">
+										<option  value="11" >温湿度</option>
+										<option  value="12" >抽屉状态</option>
+										<option  value="13" >上锁</option>
+										<option  value="14" >开锁</option>
+										<option  value="15" >总重量</option>
+										<option  value="16" >指示灯状态</option>
+										<option  value="17" >点亮一号灯</option>
+										<option  value="18" >点亮二号灯</option>
+										<option  value="19" >点亮所有灯</option>
+									</select>
+									<input type="button" class="tm-btn-subscribe" value="启动功能"  id="start"/>
+								</div>
+						        <div class="col-md-9">
+							        <input type="text" class="form-control-search"  id="contact_name" />
+								    <input type="button" class="tm-btn-subscribe"   value="设置药名"  id="name"/>
+								    <input type="text" class="form-control-search"  id="contact_weight" />
+								    <input type="button" class="tm-btn-subscribe"   value="设置重量"  id="weight"/>
+							    </div>
+							</div>
+                    </form>
+					</div>
+				</div>
+
+				<div class="footer-link">
+					<p>Copyright © 2018</p>
+				</div>
+			</div>	
+	</body>
+
+	<script src="jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="js/particles.js"></script>
+	
+	<script>
+$(document).ready(function(){
+	$("#cabinet").click(function(){
+		$.ajax({
+			type: "post",
+			url: "",
+			timeout: "4000",
+			data: $("#COMId").val()+",",
+			error: function(){
+				alert($("#COMId").val());
+			},
+			success: function(data) {
+				if(data.success==1){
+		    		alert("success"); 
+		    	} else {
+		    		alert(data.msg);
+			    }
+			}
+		});
+	});
+	
+	$("#rate").click(function(){
+		$.ajax({
+			type: "post",
+			url: "",
+			timeout: "4000",
+			data: $("#portId").val()+",",
+			error: function(){
+				alert("error");
+			},
+			success: function(data) {
+				if(data.success==1){
+		    		alert("success"); 
+		    	} else {
+		    		alert(data.msg);
+				}
+			}
+		});
+	});
+	$("#start").click(function(){
+		$.ajax({
+			type: "post",
+			url: "",
+			timeout: "4000",
+			data: $("#toolsId").val()+",",
+			error: function(){
+				alert("error");
+			},
+			success: function(data) {
+				if(data.success==1){
+		    		alert("success"); 
+		    	} else {
+		    		alert(data.msg);
+				}
+			}
+		});
+	});
+	$("#name").click(function(){
+		$.ajax({
+			type: "post",
+			url: "",
+			timeout: "4000",
+			data: $("#contact_name").val()+",",
+			error: function(){
+				alert("error");
+			},
+			success: function(data) {
+				if(data.success==1){
+		    		alert("success"); 
+		    	} else {
+		    		alert(data.msg);
+				}
+			}
+		});
+	});	
+	$("#weight").click(function(){
+		$.ajax({
+			type: "post",
+			url: "",
+			timeout: "4000",
+			data: $("#contact_weight").val()+",",
+			error: function(){
+				alert("error");
+			},
+			success: function(data) {
+				if(data.success==1){
+		    		alert("success"); 
+		    	} else {
+		    		alert(data.msg);
+				}
+			}
+		});
+	});
+	
+});
+	</script>
+
+	
+	
+</html>

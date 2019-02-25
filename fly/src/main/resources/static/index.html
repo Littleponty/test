@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>飞行器定位</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1,
+    user-scalable=no" name="viewport">
+
+    <!-- Bootstrap 3.3.7 -->
+    <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="./bower_components/font-awesome/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="./bower_components/Ionicons/css/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="./dist/css/AdminLTE.min.css">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="./dist/css/skins/_all-skins.min.css">
+
+    <!-- jQuery 3 -->
+    <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap 3.3.7 -->
+    <script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- SlimScroll -->
+    <script src="./bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+    <!-- FastClick -->
+    <script src="./bower_components/fastclick/lib/fastclick.js"></script>
+    <!-- AdminLTE App -->
+    <script src="./dist/js/adminlte.min.js"></script>
+
+    <!--百度地图密钥-->
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=6SRkGg4GCbHuBCta6X7pYozNnn4d65WF"></script>
+    <style type="text/css">
+        #allmap {
+            width: 100%;height: 100%;
+            overflow: hidden;
+            margin:0;
+            position: absolute;}
+    </style>
+
+</head>
+
+<body class="skin-blue layout-top-nav" style="height: auto; min-height: 100%;">
+<div class="wrapper" style="height: auto; min-height: 100%;">
+    <header class="main-header">
+        <nav class="navbar navbar-static-top">
+            <div class="navbar-header">
+                <a href="main.html" class="navbar-brand"><b>主页</b></a>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="data.html">数据</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">其它 <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">One more separated link</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="navbar-form navbar-left" role="search">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="navbar-search-input" placeholder="Search">
+                    </div>
+                </form>
+            </div>
+            <div class="navbar-custom-menu">
+                <ul class="nav navbar-nav">
+                    <!-- Messages: style can be found in dropdown.less-->
+                    <li class="dropdown messages-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-envelope-o"></i>
+                            <span class="label label-success">4</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="header">You have 4 messages</li>
+                            <li>
+                                <!-- inner menu: contains the actual data -->
+                                <ul class="menu">
+                                    <li><!-- start message -->
+                                        <a href="#">
+                                            <div class="pull-left">
+                                                <img src="./dist/img/user.jpg" class="img-circle" alt="User Image">
+                                            </div>
+                                            <h4>
+                                                Support Team
+                                                <small><i class="fa fa-clock-o"></i> 5 mins</small>
+                                            </h4>
+                                            <p>Why not buy a new awesome theme?</p>
+                                        </a>
+                                    </li>
+                                    <!-- end message -->
+                                </ul>
+                            </li>
+                            <li class="footer"><a href="#">See All Messages</a></li>
+                        </ul>
+                    </li>
+                    <!-- Notifications: style can be found in dropdown.less -->
+                    <li class="dropdown notifications-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-bell-o"></i>
+                            <span class="label label-warning">10</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="header">You have 10 notifications</li>
+                            <li>
+                                <!-- inner menu: contains the actual data -->
+                                <ul class="menu">
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-users text-aqua"></i> 5 new members joined today
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="footer"><a href="#">View all</a></li>
+                        </ul>
+                    </li>
+                    <!-- Tasks: style can be found in dropdown.less -->
+                    <li class="dropdown tasks-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-flag-o"></i>
+                            <span class="label label-danger">9</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="header">You have 9 tasks</li>
+                            <li>
+                                <!-- inner menu: contains the actual data -->
+                                <ul class="menu">
+                                    <li>
+                                        <a href="#">
+                                            <h3>
+                                                Design some buttons
+                                                <small class="pull-right">20%</small>
+                                            </h3>
+                                            <div class="progress xs">
+                                                <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                                    <span class="sr-only">20% Complete</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="footer">
+                                <a href="#">View all tasks</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- User Account: style can be found in dropdown.less -->
+                    <li class="dropdown user user-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <img src="./dist/img/user.jpg" class="user-image" alt="User Image">
+                            <span class="hidden-xs">Pursuer</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <!-- User image -->
+                            <li class="user-header">
+                                <img src="./dist/img/user.jpg" class="img-circle" alt="User Image">
+
+                                <p>
+                                    Pursuer
+                                    <small>Member since Nov. 2018</small>
+                                </p>
+                            </li>
+                            <!-- Menu Body -->
+                            <li class="user-body">
+                                <div class="row">
+                                    <div class="col-xs-4 text-center">
+                                        <a href="#">Followers</a>
+                                    </div>
+                                    <div class="col-xs-4 text-center">
+                                        <a href="#">Sales</a>
+                                    </div>
+                                    <div class="col-xs-4 text-center">
+                                        <a href="#">Friends</a>
+                                    </div>
+                                </div>
+                                <!-- /.row -->
+                            </li>
+                            <!-- Menu Footer-->
+                            <li class="user-footer">
+                                <div class="pull-left">
+                                    <a href="#" class="btn btn-default btn-flat">Profile</a>
+                                </div>
+                                <div class="pull-right">
+                                    <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- Control Sidebar Toggle Button -->
+                    <li>
+                        <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="content-wrapper" style="min-height: 718px;">
+        <div class="container" style="padding-left:0; ">
+            <div id="allmap"></div>
+        </div>
+    </div>
+</div>
+</body>
+
+<script>
+    // 百度地图API功能
+    var map = new BMap.Map("allmap",{mapType:BMAP_SATELLITE_MAP});
+    map.centerAndZoom(new BMap.Point(120.1624471935,30.3236616803), 18);  // 初始化地图,设置中心点坐标和地图级别
+    map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+    $.func = {
+        ajaxLogs: function() {
+            $.ajax({
+                type: "post",
+                url: "locate",
+                success: function(data) {
+                    map.clearOverlays();//清空所有覆盖物
+                    //地图缩放控件
+                    map.addControl(new BMap.NavigationControl({
+                        anchor: BMAP_ANCHOR_TOP_RIGHT//表示控件定位于地图的左上角
+                    }));
+                    //地图模式控件
+                    map.addControl(new BMap.MapTypeControl({
+                            //type:BMAP_MAPTYPE_CONTROL_DROPDOWN,//按钮呈下拉列表方式展示
+                            anchor: BMAP_ANCHOR_TOP_LEFT//表示控件定位于地图的左上角
+                        }
+                    ));
+
+                    //添加画轨迹的数组数据
+                    var polylinePointsArray = [];
+                    for(var i=0;i<data.data.length;i++){
+                        var x = data.data[i].lon;
+                        var y =data.data[i].lat;
+                        polylinePointsArray[i] = new BMap.Point(x,y);
+                    }
+
+                    var opts = {
+                        width : 250,     // 信息窗口宽度
+                        height: 80,     // 信息窗口高度
+                        title : "信息窗口" , // 信息窗口标题
+                        enableMessage:true//设置允许信息窗发送短息
+                    };
+
+                    var marker = [];
+                    var flag=1;
+                    for(var j=0;j<data.data.length;j++){
+                        marker[0] = new BMap.Marker(polylinePointsArray[0]);
+                        var label0 = new BMap.Label("起飞点", {
+                            offset: new BMap.Size(10, -20)
+                        });
+                        map.addOverlay(marker[0]);//添加标记
+                        marker[0].setLabel(label0);//添加标记标签
+                        if(data.data[j].status==="1"){
+                            marker[flag] = new BMap.Marker(polylinePointsArray[j]);
+                            var label = new BMap.Label(flag+"号点救援点", {
+                                offset: new BMap.Size(10, -20)
+                            });
+                            //标签的格式
+                            label.setStyle({
+                                width: "120px",
+                                color: '#fff',
+                                background: '#ff8355',
+                                border: '1px solid "#ff8355"',
+                                borderRadius: "5px",
+                                textAlign: "center",
+                                height: "26px",
+                                lineHeight: "26px"
+                            });
+                            map.addOverlay(marker[flag]);//添加标记
+                            marker[flag].setLabel(label);//添加标记标签
+                            flag++;
+                        }
+                    }
+
+                    //设置轨迹线内图标
+                    var sy = new BMap.Symbol(BMap_Symbol_SHAPE_BACKWARD_OPEN_ARROW, {
+                        scale: 0.6,//图标缩放大小
+                        strokeColor:'#fff',//设置矢量图标的线填充颜色
+                        strokeWeight: '2'//设置线宽
+                    });
+                    var icons = new BMap.IconSequence(sy, '10', '30');
+                    //轨迹线样式
+                    var polyline =new BMap.Polyline(polylinePointsArray, {
+                        enableEditing: false,//是否启用线编辑，默认为false
+                        enableClicking: true,//是否响应点击事件，默认为true
+                        icons:[icons],
+                        strokeWeight:'8',//折线的宽度，以像素为单位
+                        strokeOpacity: 0.8,//折线的透明度，取值范围0 - 1
+                        strokeColor:"#18a45b" //折线颜色
+                    });
+                    map.addOverlay(polyline);//添加轨迹线
+                }
+            });
+        }
+    }
+
+    //truncate table fly.data;
+    $(document).ready(function() {
+        do{
+            $.func.ajaxLogs();
+        }while(0);//先执行一次请求
+        window.setInterval($.func.ajaxLogs, 1000);//每五秒执行一次请求
+    });
+</script>
+</html>
